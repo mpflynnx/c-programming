@@ -1,10 +1,3 @@
-# c-programming-for-beginners
-
-## Hello, World first C Program
-
-Create a new file named `d.c`.
-
-```c
 /*
 multi line comment usually at top of file.
 */
@@ -21,25 +14,9 @@ int main(void) // main function
     printf("Line 3!\n");
     return 0;
 }
-```
 
-Compile file `d.c` to create new file `d`
+// compile in terminal, make sure folder same as `d.c` file
+// $ gcc -o d d.c
 
-Open terminal and type:
-```bash
-$ gcc -o d d.c
-```
-
-Execute file `d`.
-
-```bash
-$ ./d
-```
-
-Expected output
-
-```bash
-$ ./d
-Hello World
-$
-```
+// execute in terminal
+// $ ./d
