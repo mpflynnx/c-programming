@@ -366,3 +366,41 @@ mod: 2
 
 This can be used to determine if a number is either odd or even.
 
+```c
+    int x = 11;
+
+    int mod = x % 2;
+```
+
+If mod = 1, x is a odd number.
+
+```c
+    int x = 12;
+
+    int mod = x % 2;
+```
+
+If mod = 0, x is a even number.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    int x = 14;
+
+    int mod = x % 2;
+
+    printf("mod: %d\n", mod);
+
+    return 0;
+
+}
+```
+
+Expected output:
+
+```bash
+mod: 0
+```
