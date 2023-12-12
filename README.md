@@ -404,3 +404,38 @@ Expected output:
 ```bash
 mod: 0
 ```
+
+## If statements
+
+### Control structures
+Alters the flow of the program. 
+
+Using a if statement to display the text "Pass", if `grade` greater than or equal to `50`.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    int grade = 0;
+
+    printf("Grade: ");
+    scanf("%d", &grade);
+
+    if (grade >= 50)
+        printf("Pass\n");
+
+    return 0;
+
+}
+```
+
+Expected result:
+
+```bash
+Grade: 55
+Pass
+```
+
+If `grade` less than `50` then nothing happens.

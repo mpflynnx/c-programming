@@ -3,11 +3,13 @@
 int main(void)
 {
 
-    int x = 14;
+    int grade = 0;
 
-    int mod = x % 2;
+    printf("Grade: ");
+    scanf("%d", &grade);
 
-    printf("mod: %d\n", mod);
+    if (grade >= 50)
+        printf("Pass\n");
 
     return 0;
 
