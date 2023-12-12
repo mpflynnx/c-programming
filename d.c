@@ -3,24 +3,15 @@
 int main(void)
 {
 
-    // inputs to program
-    int speed = 0;
-    int time = 0;
+    float x = 5.2;
+    double y = -9.8;
 
-    // Ask user for value of speed
-    printf("Enter value for speed: ");
-    // Expects integer %d from input, will assign to speed variable using & operator.
-    scanf("%d", &speed);
+    printf("Enter value for x: ");
+    scanf("%f", &x); // Get float from user assign to x
+    printf("x: %f\n", x); // print x
 
-    // Ask user for value of time
-    printf("Enter value for time: ");
-    // Expects integer %d from input, will assign to time variable using & operator.
-    scanf("%d", &time);
-
-    // processing
-    int distance = speed * time;
-
-    // output
-    printf("distance: %d\n", distance);
+    printf("Enter value for y: ");
+    scanf("%lf", &y); // Get double from user assign to y
+    printf("y: %lf\n", y); // print y
 
 }
