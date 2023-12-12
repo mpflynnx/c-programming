@@ -439,3 +439,35 @@ Pass
 ```
 
 If `grade` less than `50` then nothing happens.
+
+A condition is something that is true or false.
+
+`>=` is known as a relational operator.
+
+```c
+grade >= 50;
+```
+
+Will execute anything inside block, denoted by {}. If condition is true.
+
+```c
+    if (grade >= 50)
+    {
+        // if true execute this block
+        printf("Pass\n");
+        printf("Congrats!\n");
+    }
+
+    // if false do not execute block
+    printf("If statement done.")
+```
+
+If  the condition false, do not execute block.
+
+Expected output:
+
+```bash
+Grade: 44
+If statement done.
+```
+

@@ -9,7 +9,14 @@ int main(void)
     scanf("%d", &grade);
 
     if (grade >= 50)
+    {
+        // if true execute this block
         printf("Pass\n");
+        printf("Congrats!\n");
+    }
+
+    // if false do not execute block
+    printf("If statement done.\n");
 
     return 0;
 
