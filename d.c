@@ -3,17 +3,13 @@
 int main(void)
 {
 
-    double x =5.2, y = 2.5;
+    int x = 11, y = 3;
 
-    double multiple = x * y;
-    double addition = x + y;
-    double division = x / y;
-    double subtraction = x - y;
+    int div = x / y;
+    int mod = x % y;
 
-    printf("mult: %f\n", multiple);
-    printf("add: %f\n", addition);
-    printf("div: %f\n", division);
-    printf("sub: %f\n", subtraction);    
+    printf("div: %d\n", div);
+    printf("mod: %d\n", mod);
 
     return 0;
 

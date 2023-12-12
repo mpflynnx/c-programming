@@ -320,3 +320,49 @@ int div = x / y;
 
 printf("div: %d\n", div);
 ```
+
+3 goes into 11, 3 times. With a remainder of 2.
+
+Expected output:
+
+```bash
+div: 3
+```
+
+Modulus `%` operator returns the remainder which is 2.
+
+```c
+int x = 11, y = 3;
+
+int mod = x % y;
+```
+
+```c
+
+#include <stdio.h>
+
+int main(void)
+{
+
+    int x = 11, y = 3;
+
+    int div = x / y;
+    int mod = x % y;
+
+    printf("div: %d\n", div);
+    printf("mod: %d\n", mod);
+
+    return 0;
+
+}
+```
+
+Expected output:
+
+```bash
+div: 3
+mod: 2
+```
+
+This can be used to determine if a number is either odd or even.
+
