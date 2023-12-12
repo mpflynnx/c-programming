@@ -269,6 +269,25 @@ char c = 'd';
 `%c` is the placeholder for using char variables.
 
 ```c
-printf("c: ");
-scanf("%c, &c);
+    printf("c: ");
+    scanf("%c", &c);
+    printf("c: %c\n", c);
+}
+```
+
+Can also use `%d` which in normally for integers. To print the ASCII integer value of the character `d` i.e 100.
+
+```c
+    printf("c: %d\n", c);
+```
+
+Compile and run program.
+
+Expected output.
+
+```bash
+$ ./d
+c: d
+c: d
+c: 100
 ```
