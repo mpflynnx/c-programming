@@ -76,7 +76,7 @@ In c you cannot do this:
 
 printf(distance); // invalid in c
 
-You must use place holder, i.e %d
+You must use place holder, i.e `%d`. `%d` means integer.
 
 ```c
 printf("dist: %d\n", distance)
@@ -107,5 +107,47 @@ This approach means if we change the variable values the program needs to be rec
 
 A better approach is to ask the user for the variable values speed and time, then the program can output the result for different values without needing to be recompiled.
 
-To do this we use `scanf` function. This is also in the `stdio.h` library.
+To do this we can use `scanf` function. This is also in the `stdio.h` library.
 
+Other functions exist that do similar to `scanf`.
+
+`scanf` works similar to `printf` but backward.
+
+We first have to initialise the variables `speed` and `time`.
+It is best practice to assign a value to variables, even if the value will be updated by the user. This initialising a variable with a value, creates a space in memory and overwrites any previous data in that memory location. In our example we are defining integer variables so we should assign the value 0 to the variables.
+
+```c
+    int speed = 0;
+    int time = 0;
+```
+
+Ask user to enter value for speed.
+
+```c
+    // Ask user for value of speed
+    printf("Enter value for speed: ");
+    // Expects integer %d from input, will assign to speed variable using & operator.
+    scanf("%d", &speed);
+```
+
+Ask user to enter value for time.
+
+```c
+    printf("Enter value for time: ");
+    // Expects integer %d from input, will assign to time variable using & operator.
+    scanf("%d", &time);
+```
+
+Recompile and run program.
+
+Expected output
+
+```bash
+$ ./d
+Enter value for speed: 4
+Enter value for time: 5
+distance: 20
+$
+```
+
+Program can be run multiple times with user entering different values without need for recompilation.
