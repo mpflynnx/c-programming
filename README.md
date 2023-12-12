@@ -497,3 +497,26 @@ Grade: 44
 Fail
 If statement done.
 ```
+
+### if else if statements
+
+Check for multiple conditions.
+
+```c
+    if (grade >= 90) printf("A\n");
+    else if (grade >= 80) printf("B\n");
+    else printf("Other\n");
+```
+
+Expected result:
+
+```bash
+Grade: 91
+A
+
+Grade: 81
+B
+
+Grade: 71
+Other
+```

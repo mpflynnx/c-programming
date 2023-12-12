@@ -8,20 +8,10 @@ int main(void)
     printf("Grade: ");
     scanf("%d", &grade);
 
-    if (grade >= 50)
-    {
-        // if true execute this block
-        printf("Pass\n");
-        printf("Congrats!\n");
-    }
-    else 
-    {
-        printf("Fail\n");
-    }
-
-    // if false do not execute block
-    printf("If statement done.\n");
-
+    if (grade >= 90) printf("A\n");
+    else if (grade >= 80) printf("B\n");
+    else printf("Other\n");
+    
     return 0;
 
 }
