@@ -14,6 +14,10 @@ int main(void)
         printf("Pass\n");
         printf("Congrats!\n");
     }
+    else 
+    {
+        printf("Fail\n");
+    }
 
     // if false do not execute block
     printf("If statement done.\n");

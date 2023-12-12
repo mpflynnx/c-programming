@@ -471,3 +471,29 @@ Grade: 44
 If statement done.
 ```
 
+### else statement
+
+if else control structures
+
+Handles the execution of the program when the if condition is false.
+
+```c
+    if (grade >= 50)
+    {
+        // if true execute this block
+        printf("Pass\n");
+        printf("Congrats!\n");
+    }
+    else 
+    {
+        printf("Fail\n");
+    }
+
+    printf("If else statements done.\n");
+```
+
+```bash
+Grade: 44
+Fail
+If statement done.
+```
