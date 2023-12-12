@@ -1,22 +1,26 @@
-/*
-multi line comment usually at top of file.
-*/
+#include <stdio.h>
 
-#include <stdio.h>  // import statement for use of  printf function
-
-// is a single line comment
-
-int main(void) // main function
+int main(void)
 {
-    // main function body inside {}
-    printf("Hello World\n"); // pass argument string "Hello World\n" to printf function
-    printf("Line 2!\n"); // \n = newline character
-    printf("Line 3!\n");
-    return 0;
+
+    // inputs to program
+    int speed = 0;
+    int time = 0;
+
+    // Ask user for value of speed
+    printf("Enter value for speed: ");
+    // Expects integer %d from input, will assign to speed variable using & operator.
+    scanf("%d", &speed);
+
+    // Ask user for value of time
+    printf("Enter value for time: ");
+    // Expects integer %d from input, will assign to time variable using & operator.
+    scanf("%d", &time);
+
+    // processing
+    int distance = speed * time;
+
+    // output
+    printf("distance: %d\n", distance);
+
 }
-
-// compile in terminal, make sure folder same as `d.c` file
-// $ gcc -o d d.c
-
-// execute in terminal
-// $ ./d
