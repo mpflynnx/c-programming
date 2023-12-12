@@ -520,3 +520,7 @@ B
 Grade: 71
 Other
 ```
+
+You can use as many else if statements as is necessary.
+
+Can also use {} to format the syntax of else if
