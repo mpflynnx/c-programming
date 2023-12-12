@@ -3,11 +3,12 @@
 int main(void)
 {
 
-    char c = 'd';
+    int x = 14;
 
-    printf("c: ");
-    scanf("%c", &c);
-    printf("c: %c\n", c);
-    printf("c: %d\n", c);
+    int mod = x % 2;
+
+    printf("mod: %d\n", mod);
+
+    return 0;
 
 }
