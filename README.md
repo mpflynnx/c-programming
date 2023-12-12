@@ -291,3 +291,32 @@ c: d
 c: d
 c: 100
 ```
+
+## Arithmetic operators
+
+We have use literal values for `int`, `float`, `double` and `char`.
+
+We can declare and initialise variables on a single line, separated by a comma.
+
+```c
+double x =5.2, y = 2.5;
+```
+
+### Common operators: `*`,`y`, `/`, `-`
+
+```c
+double multiple = x * y;
+double addition = x + y;
+double division = x / y;
+double subtraction = x - y;
+```
+
+### modulus operator `%`
+
+```c
+int x = 11, y = 3;
+
+int div = x / y;
+
+printf("div: %d\n", div);
+```
