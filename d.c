@@ -21,7 +21,7 @@ int main(void)
     }
 
     printf("total: %d\n", total);
-    printf("average: %d\n", total/5 );
+    printf("average: %d\n", total/total_numbers );
     
     return 0;
 

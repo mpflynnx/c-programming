@@ -22,6 +22,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Not operator](#not-operator)
     - [Operator precedence](#operator-precedence)
 - [While loops](#while-loops)
+    - [Incrementing a variable](#incrementing-a-variable)
+    - [Find average of numbers using while loop](#find-average-of-numbers-using-while-loop)
 - [References](#references)
 
 ## Hello World first C Program
@@ -725,7 +727,6 @@ int main(void)
     int i = 0;
     int number = 0;
     int total = 0;
-
     int total_numbers = 0;
 
     printf("How many numbers: ");
@@ -740,7 +741,7 @@ int main(void)
     }
 
     printf("total: %d\n", total);
-    printf("average: %d\n", total/5 );
+    printf("average: %d\n", total/total_numbers );
     
     return 0;
 
@@ -750,17 +751,19 @@ int main(void)
 Expected output:
 
 ```bash
-How many numbers: 8
-Enter Number 1: 5
-Enter Number 2: 6
-Enter Number 3: 7
-Enter Number 4: 8
-Enter Number 5: 9
-Enter Number 6: 10
-Enter Number 7: 11
-Enter Number 8: 12
-total: 68
-average: 13
+How many numbers: 10
+Enter Number 1: 1
+Enter Number 2: 2
+Enter Number 3: 3
+Enter Number 4: 4
+Enter Number 5: 5
+Enter Number 6: 6
+Enter Number 7: 7
+Enter Number 8: 8
+Enter Number 9: 9
+Enter Number 10: 10
+total: 55
+average: 5
 ```
 
 ## References
