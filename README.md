@@ -674,7 +674,33 @@ i++; // Add 1 to i
 
 ### Find average of numbers using while loop
 
+Here is a program which will ask the user to enter five numbers then return the total of the five numbers given and the average of the five numbers.
 
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    int i = 0;
+    int number = 0;
+    int total = 0;
+
+    while (i < 5) 
+    {
+        printf("Enter Number %d: ", i+1);
+        scanf("%d", &number);
+        total = total + number;
+        i++;
+    }
+
+    printf("total: %d\n", total);
+    printf("average: %d\n", total/5 );
+    
+    return 0;
+
+}
+```
 
 ## References
 
