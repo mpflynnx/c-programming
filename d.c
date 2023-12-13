@@ -3,13 +3,15 @@
 int main(void)
 {
 
-    int i = 10;
+    int i = 0;
 
-    while (i < 20)
+    do 
     {
-        printf("i: %d\n", i);
-        i--; // decrement i, same as: i = i -1
-    }
+        printf("Enter number (>0): ");
+        scanf("%d" , &i);
+        if (i <= 0)
+            printf("Number must be >0!\n");
+    } while (i <= 0); // while i less than 0, continue loop
 
     return 0;
 
