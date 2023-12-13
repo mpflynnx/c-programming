@@ -16,6 +16,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [else statement](#else-statement)
     - [if else if statements](#if-else-if-statements)
 - [Relational operators](#relational-operators)
+- [Logical operators](#logical-operators)
+- [References](#references)
 
 ## Hello World first C Program
 
@@ -557,3 +559,23 @@ Can also use {} to format the syntax of else if
 `==` Equality comparison. 
 
 `!=` Not equal comparison.
+
+## Logical operators
+
+Logical operators sometime called boolean operators allow us to combine boolean into new boolean values. For example to check two values are true. Compound conditional expressions.
+
+### And operator
+
+`&&` is the `and` logical operator. Checks that both conditions on either side are true.
+
+```c
+if (height > 150 && weight > 50)
+    printf("Good!\n");
+```
+
+height must be greater than 150 and weight must be greater than 50 for "Good!" to print to screen.
+
+If either height or weight is false, then the whole expression is false.
+
+
+## References
