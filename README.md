@@ -17,6 +17,9 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [if else if statements](#if-else-if-statements)
 - [Relational operators](#relational-operators)
 - [Logical operators](#logical-operators)
+    - [And operator](#and-operator)
+    - [Or operator](#or-operator)
+    - [Not operator](#not-operator)
 - [References](#references)
 
 ## Hello World first C Program
@@ -575,7 +578,18 @@ if (height > 150 && weight > 50)
 
 height must be greater than 150 and weight must be greater than 50 for "Good!" to print to screen.
 
-If either height or weight is false, then the whole expression is false.
+If either height operand or weight operand is false, then the whole expression is false.
+
+### Or operator
+
+`||` is the or operator. Checks either operands on either side can be true. Both, can be true or only one is needed to be true to return true. For expression to return false both operands must be false.
+
+```c
+if (height > 150 || weight > 50)
+    printf("Good!\n");
+```
+
+Either height can be greater than 150 or weight must be greater than 50 for "Good!" to print to screen.
 
 
 ## References

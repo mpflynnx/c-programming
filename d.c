@@ -12,7 +12,7 @@ int main(void)
     printf("Weight: ");
     scanf("%d", &weight);
 
-    if (height > 150 && weight > 50)
+    if (height > 150 || weight > 50)
         printf("Good!\n");
     else
      printf("Not good!\n");
