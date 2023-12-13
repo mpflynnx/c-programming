@@ -7,7 +7,12 @@ int main(void)
     int number = 0;
     int total = 0;
 
-    while (i < 5) 
+    int total_numbers = 0;
+
+    printf("How many numbers: ");
+    scanf("%d", &total_numbers);
+
+    while (i < total_numbers) 
     {
         printf("Enter Number %d: ", i+1);
         scanf("%d", &number);

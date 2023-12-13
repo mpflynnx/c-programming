@@ -702,6 +702,67 @@ int main(void)
 }
 ```
 
+Expected output:
+
+```bash
+Enter Number 1: 9
+Enter Number 2: 12
+Enter Number 3: 60 
+Enter Number 4: 20
+Enter Number 5: 45
+total: 146
+average: 29
+```
+
+In the above example we hardcoded a predefined number of times the loop should run of 5. We can also ask the user how many times is needed for the loop to run.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    int i = 0;
+    int number = 0;
+    int total = 0;
+
+    int total_numbers = 0;
+
+    printf("How many numbers: ");
+    scanf("%d", &total_numbers);
+
+    while (i < total_numbers) 
+    {
+        printf("Enter Number %d: ", i+1);
+        scanf("%d", &number);
+        total = total + number;
+        i++;
+    }
+
+    printf("total: %d\n", total);
+    printf("average: %d\n", total/5 );
+    
+    return 0;
+
+}
+```
+
+Expected output:
+
+```bash
+How many numbers: 8
+Enter Number 1: 5
+Enter Number 2: 6
+Enter Number 3: 7
+Enter Number 4: 8
+Enter Number 5: 9
+Enter Number 6: 10
+Enter Number 7: 11
+Enter Number 8: 12
+total: 68
+average: 13
+```
+
 ## References
 
 - [This is a reference of the core C language constructs](https://en.cppreference.com/w/c/language)
