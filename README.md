@@ -21,6 +21,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Or operator](#or-operator)
     - [Not operator](#not-operator)
     - [Operator precedence](#operator-precedence)
+- [While loops](#while-loops)
 - [References](#references)
 
 ## Hello World first C Program
@@ -616,6 +617,64 @@ Without using brackets around a comparison, the default [operator precedence](ht
 `!` has precedence over `<`
 
 It is best practice to use brackets around comparisons.
+
+## While loops
+
+C has three kinds of loops. Loops allow us to repeat execution of blocks of code.
+
+While loop with condition. While loop will execute block inside {} while, condition (i < 5) is true. when (i < 5) is false then while loop will stop executing the code inside {}.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    int i = 0;
+
+    while (i < 5) 
+    {
+        printf("i: %d\n", i);
+        i = i + 1;
+    }
+    
+    return 0;
+
+}
+```
+
+Expected output
+
+```bash
+i: 0
+i: 1
+i: 2
+i: 3
+i: 4
+```
+
+### Incrementing a variable
+
+In the example above we used, that shown below to increment the i variable by 1.
+
+```c
+i = i + 1;
+```
+
+As this is such a common expression in programming, short cut version exists such as:
+
+```c
+i += 1; // Add 1 to i
+1 += 5; // Add 5 to i
+```
+
+```c
+i++; // Add 1 to i
+```
+
+### Find average of numbers using while loop
+
+
 
 ## References
 

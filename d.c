@@ -3,16 +3,13 @@
 int main(void)
 {
 
-    int height = 0;
-    int weight = 0;
+    int i = 0;
 
-    printf("Height: ");
-    scanf("%d", &height);
-
-    if (! (height > 150))
-        printf("Not good!\n");
-    else
-     printf("Good!\n");
+    while (i < 5) 
+    {
+        printf("i: %d\n", i);
+        i = i + 1;
+    }
     
     return 0;
 
