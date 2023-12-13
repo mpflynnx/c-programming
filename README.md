@@ -20,6 +20,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [And operator](#and-operator)
     - [Or operator](#or-operator)
     - [Not operator](#not-operator)
+    - [Operator precedence](#operator-precedence)
 - [References](#references)
 
 ## Hello World first C Program
@@ -586,10 +587,36 @@ If either height operand or weight operand is false, then the whole expression i
 
 ```c
 if (height > 150 || weight > 50)
-    printf("Good!\n");
+  printf("Good!\n");
 ```
 
 Either height can be greater than 150 or weight must be greater than 50 for "Good!" to print to screen.
 
+### Not operator
+
+`!` not operator. Takes a true and makes it false. Takes a false and makes to true. Invertor.
+
+```c
+if (! (height > 150))
+    printf("Not good!\n");
+else
+    printf("Good!\n");
+```
+
+Prints "Not good" if height not greater than 150.
+
+Must use brackets () around height > 150 comparison so that this is done first. 
+
+Use not operator to make code more readable.
+
+### Operator precedence
+
+Without using brackets around a comparison, the default [operator precedence](https://en.cppreference.com/w/c/language/operator_precedence) is used.
+
+`!` has precedence over `<`
+
+It is best practice to use brackets around comparisons.
 
 ## References
+
+- [This is a reference of the core C language constructs](https://en.cppreference.com/w/c/language)

@@ -9,13 +9,10 @@ int main(void)
     printf("Height: ");
     scanf("%d", &height);
 
-    printf("Weight: ");
-    scanf("%d", &weight);
-
-    if (height > 150 || weight > 50)
-        printf("Good!\n");
+    if (! (height > 150))
+        printf("Not good!\n");
     else
-     printf("Not good!\n");
+     printf("Good!\n");
     
     return 0;
 
