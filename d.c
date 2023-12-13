@@ -3,26 +3,18 @@
 int main(void)
 {
 
-    int i = 0;
-    int number = 0;
-    int total = 0;
-
-    int total_numbers = 0;
-
-    printf("How many numbers: ");
-    scanf("%d", &total_numbers);
-
-    while (i < total_numbers) 
-    {
-        printf("Enter Number %d: ", i+1);
-        scanf("%d", &number);
-        total = total + number;
-        i++;
-    }
-
-    printf("total: %d\n", total);
-    printf("average: %d\n", total/total_numbers );
+    int num = 0; // Initial value of num is 0
+    int max = -1; // Initial max number start value, so that num of 0 is greater than max of -1
     
+    while ( num != -1 ) // loop while num is not -1
+    {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+        if (num > max) max = num; // nested structure inside a while loop
+        printf("max: %d\n", max);
+    }
+    printf("max: %d\n", max);
+
     return 0;
 
 }

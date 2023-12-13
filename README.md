@@ -766,6 +766,55 @@ total: 55
 average: 5
 ```
 
+### Indefinite loop using a while loop
+
+A loop than can be run a unknown number of times, can be programmed using a while loop.
+
+In this example the program will continue asking the user for a positive number, until the number given is -1. Upon the number -1 being entered, the program exits the while loop and prints to screen the highest number that the user entered.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    int num = 0; // Initial value of num is 0
+    int max = -1; // Initial max number start value, so that num of 0 is greater than max of -1
+    
+    while ( num != -1 ) // loop while num is not -1
+    {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+        if (num > max) max = num; // nested structure inside a while loop
+
+    }
+    printf("max: %d\n", max);
+
+    return 0;
+
+}
+```
+
+Expected output:
+
+```bash
+Enter a number: 1
+max: 1
+Enter a number: 3
+max: 3
+Enter a number: 2
+max: 3
+Enter a number: 4
+max: 4
+Enter a number: 6
+max: 6
+Enter a number: 5
+max: 6
+Enter a number: -1
+max: 6
+max: 6
+```
+
 ## References
 
 - [This is a reference of the core C language constructs](https://en.cppreference.com/w/c/language)
