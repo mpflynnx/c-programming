@@ -3,13 +3,13 @@
 int main(void)
 {
 
-    int i = 10;
+    int i = 0;
 
-    while (i < 20)
+    do 
     {
         printf("i: %d\n", i);
-        i--; // decrement i, same as: i = i -1
-    }
+        i++;
+    } while (i < 5); // notice ; after condition, for do while loops
 
     return 0;
 

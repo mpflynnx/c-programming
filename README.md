@@ -26,6 +26,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Find average of numbers using while loop](#find-average-of-numbers-using-while-loop)
     - [Indefinite loop using a while loop](#indefinite-loop-using-a-while-loop)
     - [Infinite loop](#infinite-loop)
+- [Do while loops](#do-while-loops)
+    - [Simple do while loop example](#simple-do-while-loop-example)
 - [References](#references)
 
 ## Hello World first C Program
@@ -819,7 +821,7 @@ max: 6
 
 ### Infinite loop
 
-An infinite loop is a loop that will never terminate. On same occasions this can be beneficial, but mostly infinite loops should be avoided.
+An infinite loop is a loop that will never terminate. On some occasions this can be beneficial, but mostly infinite loops should be avoided.
 
 ```c
 #include <stdio.h>
@@ -855,6 +857,41 @@ i: -151245
 `i` is being decremented continuously. The loop will never get to `i` being greater than 20.
 
 This program will never end. Press keys, Control + c to force the program to exit.
+
+## Do while loops
+
+Do while loops are used to guarantee to run the loop body at least once. With the while loop there is no guarantee the loop body will run.
+
+### Simple do while loop example
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    int i = 0;
+
+    do 
+    {
+        printf("i: %d\n", i);
+        i++;
+    } while (i < 5); // ; after condition, for do while loops
+
+    return 0;
+
+}
+```
+
+Output:
+
+```bash
+i: 0
+i: 1
+i: 2
+i: 3
+i: 4
+```
 
 ## References
 
