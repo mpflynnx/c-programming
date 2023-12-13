@@ -3,17 +3,13 @@
 int main(void)
 {
 
-    int num = 0; // Initial value of num is 0
-    int max = -1; // Initial max number start value, so that num of 0 is greater than max of -1
-    
-    while ( num != -1 ) // loop while num is not -1
+    int i = 10;
+
+    while (i < 20)
     {
-        printf("Enter a number: ");
-        scanf("%d", &num);
-        if (num > max) max = num; // nested structure inside a while loop
-        printf("max: %d\n", max);
+        printf("i: %d\n", i);
+        i--; // decrement i, same as: i = i -1
     }
-    printf("max: %d\n", max);
 
     return 0;
 
