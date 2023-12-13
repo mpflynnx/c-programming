@@ -1,6 +1,23 @@
-# c-programming-for-beginners
+# C Programming for Beginners Course
 
-## Hello, World first C Program
+Course notes for the [C Programming for Beginners Course](https://www.youtube.com/watch?v=ssJY5MDLjlo&t=3220s) provided by [Portfolio Courses](https://portfoliocourses.com/).
+
+# Table of Contents
+- [Hello World first C Program](#hello-world-first-c-program)
+- [Input Processing Output (IPO) Model example](#input-processing-output-ipo-model-example)
+- [Variable types and using printf & scanf](#variable-types-and-using-printf--scanf)
+    - [double and float variables](#double-and-float-variables)
+    - [char variable](#char-variable)
+    - [printf and scanf with char variables](#printf-and-scanf-with-char-variables)
+- [Arithmetic operators](#arithmetic-operators)
+    - [Common operators](#common-operators)
+    - [Modulus operator](#modulus-operator)
+- [If statements](#if-statements)
+    - [else statement](#else-statement)
+    - [if else if statements](#if-else-if-statements)
+- [Relational operators](#relational-operators)
+
+## Hello World first C Program
 
 Create a new file named `d.c`.
 
@@ -64,7 +81,7 @@ Assign value to variable time, initalise the variable.
 int time = 7; // hours
 ```
 
-Use expression to calcaulate distance
+Use expression to calculate distance
 
 ```c
 int distance = speed * time; // 140
@@ -154,7 +171,7 @@ Program can be run multiple times with user entering different values without ne
 
 ## Variable types and using printf & scanf
 
-### `double` and `float` variables.
+### double and float variables
 
 `float` is short hand for floating point value, allows us to store real numbers. That is numbers with decimal places. 0 is also a `float`.
 
@@ -264,7 +281,7 @@ y: -10.880000
 char c = 'd';
 ```
 
-### `printf` and `scanf` with char variables.
+### printf and scanf with char variables
 
 `%c` is the placeholder for using char variables.
 
@@ -302,7 +319,7 @@ We can declare and initialise variables on a single line, separated by a comma.
 double x =5.2, y = 2.5;
 ```
 
-### Common operators: `*`,`y`, `/`, `-`
+### Common operators
 
 ```c
 double multiple = x * y;
@@ -311,7 +328,7 @@ double division = x / y;
 double subtraction = x - y;
 ```
 
-### modulus operator `%`
+### modulus operator %
 
 ```c
 int x = 11, y = 3;
@@ -524,3 +541,19 @@ Other
 You can use as many else if statements as is necessary.
 
 Can also use {} to format the syntax of else if
+
+## Relational operators
+
+ Relational operators check the relationship between two values and will return either true or false.
+
+ We have already seen `>=` greater than or equal to relational operator. There are others.
+
+`<=` Less than or equal to.
+
+`<` Less than.
+
+`>` Greater than.
+
+`==` Equality comparison. 
+
+`!=` Not equal comparison.
