@@ -31,24 +31,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Do while loop used to validate user input](/docs/do-while-loops.md#do-while-loop-used-to-validate-user-input)
 - [For loops](/docs/for-loops.md)
     - [Simple For loop example](/docs/for-loops.md#simple-for-loop-example)
+- [Meters to Feet conversion program](/docs/meters-to-feet-conversion.md)
 - [References](#references)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## References
