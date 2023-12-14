@@ -29,6 +29,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [Do while loops](/docs/do-while-loops.md)
     - [Simple do while loop example](/docs/do-while-loops.md#simple-do-while-loop-example)
     - [Do while loop used to validate user input](/docs/do-while-loops.md#do-while-loop-used-to-validate-user-input)
+- [For loops](/docs/for-loops.md)
+    - [Simple For loop example](/docs/for-loops.md#simple-for-loop-example)
 - [References](#references)
 
 

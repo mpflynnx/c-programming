@@ -3,16 +3,8 @@
 int main(void)
 {
 
-    int i = 0;
-
-    do 
-    {
-        printf("Enter number (>0): ");
-        scanf("%d" , &i);
-        if (i <= 0)
-            printf("Number must be >0!\n");
-    } while (i <= 0); // while i less than 0, continue loop
-
+    for (int i = 0; i < 5; i++)
+        printf("i: %d\n", i);
     return 0;
 
 }
