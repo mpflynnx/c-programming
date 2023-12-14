@@ -3,17 +3,10 @@
 int main(void)
 {
 
-    int grade[] = {92, 85, 72, 73, 95};
+    char s1[] = "This is my string.";
 
-    // Print all student grades.
-    for (int i = 0; i < 5; i++)
-        printf("grade[%d] = %d\n", i, grade[i]);
-
-    // Calculate average grade
-    int total = 0;
-    for (int i = 0; i < 5; i++)
-        total += grade[i];
-    printf("average: %d\n", total / 5);
+    if (s1[18] == '\0')
+        printf("Thats a null terminator.\n");
 
     return 0;
 }

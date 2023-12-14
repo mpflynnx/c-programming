@@ -40,7 +40,11 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Using a for loop with Arrays](/docs/arrays.md#using-a-for-loop-with-arrays)
     - [Updating an Array element](/docs/arrays.md#updating-an-array-element)
     - [Initialising Arrays](/docs/arrays.md#initialising-arrays)
-    - [Common errors using Arrays](/docs/arrays.md#common-errors-using-arrays) 
+    - [Common errors using Arrays](/docs/arrays.md#common-errors-using-arrays)
+- [Strings](/docs/strings.md)
+    - [Printing strings](/docs/strings.md#printing-strings)
+    - [Initialise char array alternative](/docs/strings.md#initialise-char-array-alternative)
+    - [Find length of a string](/docs/strings.md#find-length-of-a-string)
 - [References](#references)
 
 
