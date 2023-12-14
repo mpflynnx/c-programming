@@ -1,8 +1,8 @@
 ## Meters to Feet conversion program
 
-Now we know about `While loops` and `For loops` we can start to create useful programs.
+Now we know about `While loops`, `Do While loops` and `For loops` we can start to create useful programs.
 
-We can use the `While loops` to request and validate inputs from the user.
+We can use `Do While loops` to request and validate inputs from the user.
 We can use `For loops` to work on the inputs provided.
 
 Here is a program that will convert Meters to Feet and display a conversion table to the user.

@@ -38,3 +38,5 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 ## References
 
 - [This is a reference of the core C language constructs](https://en.cppreference.com/w/c/language)
+- [printf](https://en.wikipedia.org/wiki/Printf)
+- [C_Programming - Simple_input_and_output](https://en.wikibooks.org/wiki/C_Programming/Simple_input_and_output)

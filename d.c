@@ -27,6 +27,6 @@ int main(void)
     printf("*******************\n");
     for (double conv = start; conv <= stop; conv += step)
     {
-        printf("%f %f\n", conv, conv * 3.28084);
+        printf("%-10.2f %-10.2f\n", conv, conv * 3.28084);
     }
 }
