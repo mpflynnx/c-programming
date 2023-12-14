@@ -34,6 +34,13 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [Meters to Feet conversion program](/docs/meters-to-feet-conversion.md)
 - [prinf placeholder fields](/docs/printf-placeholder-fields.md)
 - [Switch statements](/docs/switch-statements.md)
+- [Arrays](/docs/arrays.md)
+    - [Creating an Array](/docs/arrays.md#creating-an-array)
+    - [Accessing an Array index](/docs/arrays.md#accessing-an-array-index)
+    - [Using a for loop with Arrays](/docs/arrays.md#using-a-for-loop-with-arrays)
+    - [Updating an Array element](/docs/arrays.md#updating-an-array-element)
+    - [Initialising Arrays](/docs/arrays.md#initialising-arrays)
+    - [Common errors using Arrays](/docs/arrays.md#common-errors-using-arrays) 
 - [References](#references)
 
 

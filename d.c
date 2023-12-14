@@ -3,19 +3,17 @@
 int main(void)
 {
 
-    int number = 2;
+    int grade[] = {92, 85, 72, 73, 95};
 
-    switch (number) 
-    {
-        case 0:
-            printf("Case 0!\n");
-            break;
-        case 1:
-            printf("Case 1!\n");
-            break;
-        default:
-            printf("Default case!\n");
-    }
+    // Print all student grades.
+    for (int i = 0; i < 5; i++)
+        printf("grade[%d] = %d\n", i, grade[i]);
+
+    // Calculate average grade
+    int total = 0;
+    for (int i = 0; i < 5; i++)
+        total += grade[i];
+    printf("average: %d\n", total / 5);
 
     return 0;
 }
