@@ -33,6 +33,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Simple For loop example](/docs/for-loops.md#simple-for-loop-example)
 - [Meters to Feet conversion program](/docs/meters-to-feet-conversion.md)
 - [prinf placeholder fields](/docs/printf-placeholder-fields.md)
+- [Switch statements](/docs/switch-statements.md)
 - [References](#references)
 
 
