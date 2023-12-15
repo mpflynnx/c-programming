@@ -43,8 +43,9 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Common errors using Arrays](/docs/arrays.md#common-errors-using-arrays)
 - [Strings](/docs/strings.md)
     - [Printing strings](/docs/strings.md#printing-strings)
+    - [Printing a char array](/docs/strings.md#printing-a-char-array)
     - [Initialise char array alternative](/docs/strings.md#initialise-char-array-alternative)
-    - [Find length of a string](/docs/strings.md#find-length-of-a-string)
+    - [Finding the length of a string](/docs/strings.md#finding-the-length-of-a-string)
 - [References](#references)
 
 
