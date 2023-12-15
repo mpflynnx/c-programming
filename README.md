@@ -49,6 +49,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Counting characters in a string](/docs/strings.md#counting-characters-in-a-string)
     - [string.h library](/docs/strings.md#stringh-library)
     - [Finding the length of a string using strlen](/docs/strings.md#finding-the-length-of-a-string-using-strlen)
+    - [String concatenation using strcat](/docs/strings.md#string-concatenation-using-strcat)
 - [References](#references)
 
 

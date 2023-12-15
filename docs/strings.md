@@ -286,3 +286,11 @@ Output:
 length: 31
 Number of 0 is: 4
 ```
+
+### String concatenation using strcat
+
+[`strcat`](https://www.tutorialspoint.com/c_standard_library/c_function_strcat.htm) Appends the string pointed to, by src to the end of the string pointed to by dest.
+
+```c
+strcat(dest, src);
+```
