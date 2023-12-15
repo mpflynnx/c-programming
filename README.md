@@ -47,6 +47,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Initialise char array alternative](/docs/strings.md#initialise-char-array-alternative)
     - [Finding the length of a string](/docs/strings.md#finding-the-length-of-a-string)
     - [Counting characters in a string](/docs/strings.md#counting-characters-in-a-string)
+    - [string.h library](/docs/strings.md#stringh-library)
+    - [Finding the length of a string using strlen](/docs/strings.md#finding-the-length-of-a-string-using-strlen)
 - [References](#references)
 
 
@@ -55,3 +57,4 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [This is a reference of the core C language constructs](https://en.cppreference.com/w/c/language)
 - [printf](https://en.wikipedia.org/wiki/Printf)
 - [C_Programming - Simple_input_and_output](https://en.wikibooks.org/wiki/C_Programming/Simple_input_and_output)
+- [C Library - <string.h>](https://www.tutorialspoint.com/c_standard_library/string_h.htm)

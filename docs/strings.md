@@ -194,3 +194,95 @@ Found 0 at s1[9]
 Found 0 at s1[11]
 s1: 102030405060
 ```
+
+Problems with this program will occur if the length of the string entered by the user is greater than the length of the array.
+
+For example:
+
+```bash
+Enter text (no spaces): 012345678901234567890123456789
+Found 0 at s1[0]
+Found 0 at s1[10]
+Found 0 at s1[20]
+s1: 012345678901234567890123456789
+*** stack smashing detected ***: terminated
+Aborted
+```
+
+Here the null terminator is being placed somewhere outside the array, so the program will never find it.
+
+As working with string is so common in all programming languages, libraries exist to help. 
+
+### string.h library
+
+`string.h` provides a number of functions to help working with strings.
+
+To use the `string.h` library add the include statement.
+
+```c
+#include <string.h>
+```
+
+### Finding the length of a string using strlen
+
+A function included in library `string.h` is called `strlen`. This function will return the length of a string. It does not use the null terminator in it's algorithm.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+
+    char s1[] = "This is the my string.";
+
+    int length = strlen(s1);
+
+    printf("length: %d\n", length);
+
+    return 0;
+}
+```
+Output:
+```bash
+length: 22
+```
+
+### Counting characters in a string using strlen
+
+We can use the `strlen` function to help search through a string.
+
+In the following program. 
+- I create a char array with some characters. 
+- I then check every element in the array for the character 0.
+- I exit the for loop when the length is reached.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+
+    char s1[] = "0123456789012345678901234567890";
+
+    int length = strlen(s1);
+
+    int num_is = 0;
+
+    for (int i = 0; i < length; i++)
+        if (s1[i] == '0') num_is++;
+
+    printf("length: %d\n", length);
+    printf("Number of 0 is: %d\n", num_is);
+
+    return 0;
+}
+```
+
+Output:
+
+```bash
+length: 31
+Number of 0 is: 4
+```

@@ -1,26 +1,20 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
 
-    char s1[20]; // char array length 20
+    char s1[] = "0123456789012345678901234567890";
 
-    printf("Enter text (no spaces): ");
+    int length = strlen(s1);
 
-    // Read string and store in s1.
-    // No need for &s1, why? See section on pointers.
-    scanf("%s", s1); 
+    int num_is = 0;
 
-    int i = 0;
+    for (int i = 0; i < length; i++)
+        if (s1[i] == '0') num_is++;
 
-    while (s1[i] != '\0')
-    {
-        if (s1[i] == '0')
-            printf("Found 0 at s1[%d]\n", i);
-        i++;
-    }
-
-    printf("s1: %s\n", s1);
+    printf("length: %d\n", length);
+    printf("Number of 0 is: %d\n", num_is);
 
     return 0;
 }
