@@ -80,3 +80,65 @@ Note: `\0` is in fact stored as one character, so can be used inside single quot
 
 ### Finding the length of a string
 
+In the following program. 
+- I create a char array of length 20. 
+- I request the user to enter some characters.
+- I then store the chars in array s1.
+- I then print all the elements of the array s1.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    char s1[20]; // char array length 20
+
+    printf("Enter text (no spaces): ");
+
+    // Read string and stored in s1, no need for & why? See section on pointers.
+    scanf("%s", s1); 
+
+    for (int i = 0; i < 20; i++)
+        printf("s1[%d] = %c\n", i, s1[i]);
+
+    printf("s1: %s\n", s1);
+    
+    return 0;
+}
+```
+
+Output:
+
+```bash
+Enter text (no spaces): textnospaces
+s1[0] = t
+s1[1] = e
+s1[2] = x
+s1[3] = t
+s1[4] = n
+s1[5] = o
+s1[6] = s
+s1[7] = p
+s1[8] = a
+s1[9] = c
+s1[10] = e
+s1[11] = s
+s1[12] = 
+s1[13] = 
+s1[14] = 
+s1[15] = 
+s1[16] = 
+s1[17] = 
+s1[18] = 
+s1[19] =
+s1: textnospaces
+```
+
+Notice that there are empty elements of the array, because the number of characters entered by the user was less than the array length.
+
+What signifies the end of the string is the null terminator not the length of the char array. The null terminator has been placed at element 12, but is not printable so looks empty.
+
+The array was not initialised with all zeros, so there could be junk data displayed when the array elements are printed.
+
+

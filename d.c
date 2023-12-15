@@ -3,13 +3,17 @@
 int main(void)
 {
 
-    char s1[] = "This is my string.";
+    char s1[20]; // char array length 20
 
-    for (int i = 0; i < 18; i++)
+    printf("Enter text (no spaces): ");
+
+    // Read string and stored in s1, no need for & why? See section on pointers.
+    scanf("%s", s1); 
+
+    for (int i = 0; i < 20; i++)
         printf("s1[%d] = %c\n", i, s1[i]);
 
-    if (s1[18] == '\0')
-        printf("Thats a null terminator.\n");
-
+    printf("s1: %s\n", s1);
+    
     return 0;
 }
