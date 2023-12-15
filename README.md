@@ -46,6 +46,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Printing a char array](/docs/strings.md#printing-a-char-array)
     - [Initialise char array alternative](/docs/strings.md#initialise-char-array-alternative)
     - [Finding the length of a string](/docs/strings.md#finding-the-length-of-a-string)
+    - [Counting characters in a string](/docs/strings.md#counting-characters-in-a-string)
 - [References](#references)
 
 

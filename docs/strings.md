@@ -96,7 +96,8 @@ int main(void)
 
     printf("Enter text (no spaces): ");
 
-    // Read string and stored in s1, no need for & why? See section on pointers.
+    // Read string and store in s1.
+    // No need for &s1, why? See section on pointers.
     scanf("%s", s1); 
 
     for (int i = 0; i < 20; i++)
@@ -141,4 +142,55 @@ What signifies the end of the string is the null terminator not the length of th
 
 The array was not initialised with all zeros, so there could be junk data displayed when the array elements are printed.
 
+### Counting characters in a string
 
+We can use the null terminator to help search through a string, without needing to know the length of the string.
+
+In the following program. 
+- I create a char array of length 20. 
+- I request the user to enter some characters.
+- I then store the chars in array s1.
+- I then check every element in the array for the character 0.
+- I exit the while loop when the null terminator is found.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+
+    char s1[20]; // char array length 20
+
+    printf("Enter text (no spaces): ");
+
+    // Read string and store in s1.
+    // No need for &s1, why? See section on pointers.
+    scanf("%s", s1); 
+
+    int i = 0;
+
+    while (s1[i] != '\0')
+    {
+        if (s1[i] == '0')
+            printf("Found 0 at s1[%d]\n", i);
+        i++;
+    }
+
+    printf("s1: %s\n", s1);
+
+    return 0;
+}
+```
+
+Output:
+
+```bash
+Enter text (no spaces): 102030405060
+Found 0 at s1[1]
+Found 0 at s1[3]
+Found 0 at s1[5]
+Found 0 at s1[7]
+Found 0 at s1[9]
+Found 0 at s1[11]
+s1: 102030405060
+```

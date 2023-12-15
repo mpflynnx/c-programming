@@ -7,13 +7,20 @@ int main(void)
 
     printf("Enter text (no spaces): ");
 
-    // Read string and stored in s1, no need for & why? See section on pointers.
+    // Read string and store in s1.
+    // No need for &s1, why? See section on pointers.
     scanf("%s", s1); 
 
-    for (int i = 0; i < 20; i++)
-        printf("s1[%d] = %c\n", i, s1[i]);
+    int i = 0;
+
+    while (s1[i] != '\0')
+    {
+        if (s1[i] == '0')
+            printf("Found 0 at s1[%d]\n", i);
+        i++;
+    }
 
     printf("s1: %s\n", s1);
-    
+
     return 0;
 }
