@@ -441,3 +441,60 @@ a lower
 y lower
 . 
 ```
+
+### Convert uppercase letters to lowercase
+
+To change the case of a letter the following functions are available from the `ctype.h` library.
+
+- `tolower` function converts a given letter to lowercase.
+
+This function returns lowercase equivalent to c, if such value exists, else c remains unchanged. The value is returned as an int value that can be implicitly casted to char.
+
+- `toupper` function  converts lowercase letter to uppercase.
+
+This function returns uppercase equivalent to c, if such value exists, else c remains unchanged. The value is returned as an int value that can be implicitly casted to char.
+
+In the following program. I will convert lowercase letters in a string to uppercase letters.
+
+- I create a char array `s`  which will contains a sentence of upper and lowercase letters.
+- I print the char array.
+- I the iterate through each element in the array.
+- If the `isupper` function returns true, I use `tolower` to convert the letter in the array to lowercase.
+- else if the `islower` function returns true, I use `toupper` to convert the letter in the array to uppercase.
+- I print the updated char array.
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(void)
+{
+
+    char s[] = "ThIs Is tHe Way.";
+
+    printf("s: %s\n", s);
+
+
+    int length = strlen(s);
+
+    for (int i = 0; i < length; i++)
+    {
+        if (isupper(s[i])) 
+            s[i] = tolower(s[i]);
+        else if (islower(s[i]))
+            s[i] = toupper(s[i]);
+    }
+
+    printf("s: %s\n", s);
+
+    return 0;
+}
+```
+
+Output:
+
+```bash
+s: ThIs Is tHe Way.
+s: tHiS iS ThE wAY.
+```

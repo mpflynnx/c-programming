@@ -52,6 +52,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [String concatenation using strcat](/docs/strings.md#string-concatenation-using-strcat)
     - [Checking for string equality using strcmp](/docs/strings.md#checking-for-string-equality-using-strcmp)
     - [Finding the uppercase and lowercase letters in a string](/docs/strings.md#finding-the-uppercase-and-lowercase-letters-in-a-string)
+    - [Convert uppercase letters to lowercase](/docs/strings.md#convert-uppercase-letters-to-lowercase)
 - [References](#references)
 
 
