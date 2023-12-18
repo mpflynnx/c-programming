@@ -1,19 +1,26 @@
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 int main(void)
 {
 
-    int grade[] = {92, 85, 72, 73, 95};
+    char s[] = "ThIs Is tHe Way.";
 
-    // Print all student grades.
-    for (int i = 0; i < 5; i++)
-        printf("grade[%d] = %d\n", i, grade[i]);
+    printf("s: %s\n", s);
 
-    // Calculate average grade
-    int total = 0;
-    for (int i = 0; i < 5; i++)
-        total += grade[i];
-    printf("average: %d\n", total / 5);
+
+    int length = strlen(s);
+
+    for (int i = 0; i < length; i++)
+    {
+        if (isupper(s[i])) 
+            s[i] = tolower(s[i]);
+        else if (islower(s[i]))
+            s[i] = toupper(s[i]);
+    }
+
+    printf("s: %s\n", s);
 
     return 0;
 }
