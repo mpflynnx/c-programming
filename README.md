@@ -51,6 +51,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Finding the length of a string using strlen](/docs/strings.md#finding-the-length-of-a-string-using-strlen)
     - [String concatenation using strcat](/docs/strings.md#string-concatenation-using-strcat)
     - [Checking for string equality using strcmp](/docs/strings.md#checking-for-string-equality-using-strcmp)
+    - [Finding the uppercase and lowercase letters in a string](/docs/strings.md#finding-the-uppercase-and-lowercase-letters-in-a-string)
 - [References](#references)
 
 
@@ -60,3 +61,4 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [printf](https://en.wikipedia.org/wiki/Printf)
 - [C_Programming - Simple_input_and_output](https://en.wikibooks.org/wiki/C_Programming/Simple_input_and_output)
 - [C Library - <string.h>](https://www.tutorialspoint.com/c_standard_library/string_h.htm)
+- [C Library - <ctype.h>](https://www.tutorialspoint.com/c_standard_library/ctype_h.htm)

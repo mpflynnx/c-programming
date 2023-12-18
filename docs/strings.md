@@ -366,3 +366,78 @@ int main(void)
     return 0;
 }
 ```
+
+### ctype.h library
+
+`ctype.h` Provides several functions that are useful for testing and mapping characters.
+
+To use the `ctype.h` library, add the include statement.
+
+```c
+#include <ctype.h>
+```
+
+All the functions return non-zero (true) if the argument c satisfies the condition described, and zero(false) if not.
+
+### Finding the uppercase and lowercase letters in a string
+
+To determine if a string contains upper or lowercase letters the following functions are available from the `ctype.h` library.
+
+- `isupper` function checks whether the passed character is an uppercase letter.
+
+- `islower` function checks whether the passed character is lowercase letter.
+
+In the following program. 
+- I create a char array `s`  which will contains a sentence of upper and lowercase letters.
+- I the iterate through each element in the array.
+- I print out each element.
+- If the `isupper` function returns true, then print "upper".
+- else if the `islower` function returns true, then print "lower".
+- Print nothing if the element is not a letter.
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(void)
+{
+
+    char s[] = "ThIs Is tHe Way.";
+
+    int length = strlen(s);
+
+    for (int i = 0; i < length; i++)
+    {
+        printf("%c ", s[i]);
+        if (isupper(s[i]))
+            printf("upper\n");
+        else if (islower(s[i]))
+            printf("lower\n");
+        else printf("\n");
+    }
+
+    return 0;
+}
+```
+
+Output:
+
+```bash
+T upper
+h lower
+I upper
+s lower
+  
+I upper
+s lower
+  
+t lower
+H upper
+e lower
+  
+W upper
+a lower
+y lower
+. 
+```
