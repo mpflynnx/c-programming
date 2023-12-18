@@ -50,6 +50,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [string.h library](/docs/strings.md#stringh-library)
     - [Finding the length of a string using strlen](/docs/strings.md#finding-the-length-of-a-string-using-strlen)
     - [String concatenation using strcat](/docs/strings.md#string-concatenation-using-strcat)
+    - [Checking for string equality using strcmp](/docs/strings.md#checking-for-string-equality-using-strcmp)
 - [References](#references)
 
 

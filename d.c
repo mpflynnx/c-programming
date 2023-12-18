@@ -4,12 +4,13 @@
 int main(void)
 {
 
-    char s1[50] = "The destination sentence. ";
-    char s2[] = "The source sentence.";
+    char s1[] = "This is a string.";
+    char s2[] = "This is a string.";
 
-    strcat(s1, s2);
-
-    printf("s1: %s\n", s1);
+    if (strcmp(s1, s2) == 0)
+        printf("s1 and s2 are equal.\n");
+    else
+        printf("s1 and s2 are not equal.\n");
 
     return 0;
 }

@@ -324,3 +324,45 @@ s1: The destination sentence. The source sentence.
 ```
 
 Note: The destination string char array `s1` must be large enough to store the source string char array `s2`.
+
+### Checking for string equality using strcmp
+
+[`strcmp`](https://www.tutorialspoint.com/c_standard_library/c_function_strcmp.htm) Compares the string pointed to, by str1 to the string pointed to by str2.
+
+```c
+strcmp(str1, str2);
+```
+
+This function return values that are as follows:-
+
+- if Return value < 0 then it indicates str1 is less than str2.
+
+- if Return value > 0 then it indicates str2 is less than str1.
+
+- if Return value = 0 then it indicates str1 is equal to str2.
+
+In the following program. 
+- I create a char array `s1`  which will contain a sentence.
+- I create a char array `s2` which will contain the same sentence as `s1`. 
+- I then use the `string.h` function `strcmp` to compare `s1` to `s2`
+- If `0` is returned from the function then print `s1 and s2 are equal.`
+- If `0` is not returned from the function then print `s1 and s2 are not equal.`
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+
+    char s1[] = "This is a string.";
+    char s2[] = "This is a string.";
+
+    if (strcmp(s1, s2) == 0)
+        printf("s1 and s2 are equal.\n");
+    else
+        printf("s1 and s2 are not equal.\n");
+
+    return 0;
+}
+```
