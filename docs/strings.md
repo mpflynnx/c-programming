@@ -73,7 +73,6 @@ You can check for equality of the null type terminator with:
 ```c
 if (s1[18] == '\0')
     printf("Thats a null terminator.\n");
-
 ```
 
 Note: `\0` is in fact stored as one character, so can be used inside single quotes.
@@ -195,7 +194,7 @@ Found 0 at s1[11]
 s1: 102030405060
 ```
 
-Problems with this program will occur if the length of the string entered by the user is greater than the length of the array.
+Note: Problems with this program will occur if the length of the string entered by the user is greater than the length of the array.
 
 For example:
 
@@ -211,13 +210,13 @@ Aborted
 
 Here the null terminator is being placed somewhere outside the array, so the program will never find it.
 
-As working with string is so common in all programming languages, libraries exist to help. 
+As working with strings is so common in all programming languages, libraries exist to help. 
 
 ### string.h library
 
-`string.h` provides a number of functions to help working with strings.
+`string.h` provides a number of functions to help work with strings.
 
-To use the `string.h` library add the include statement.
+To use the `string.h` library, add the include statement.
 
 ```c
 #include <string.h>
@@ -289,8 +288,39 @@ Number of 0 is: 4
 
 ### String concatenation using strcat
 
-[`strcat`](https://www.tutorialspoint.com/c_standard_library/c_function_strcat.htm) Appends the string pointed to, by src to the end of the string pointed to by dest.
+[`strcat`](https://www.tutorialspoint.com/c_standard_library/c_function_strcat.htm) Appends the string pointed to, by source to the end of the string pointed to by destination.
 
 ```c
 strcat(dest, src);
 ```
+
+In the following program. 
+- I create a char array `s1` of length 50 which will contain a sentence.
+- I create a char array `s2` which will contain a sentence. 
+- I then use the `string.h` function `strcat` to concatenate `s2` into `s1`
+- I the print the new value of `s1`
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+
+    char s1[50] = "The destination sentence. ";
+    char s2[] = "The source sentence.";
+
+    strcat(s1, s2);
+
+    printf("s1: %s\n", s1);
+
+    return 0;
+}
+```
+
+Output:
+```
+s1: The destination sentence. The source sentence.
+```
+
+Note: The destination string char array `s1` must be large enough to store the source string char array `s2`.

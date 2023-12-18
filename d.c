@@ -4,17 +4,12 @@
 int main(void)
 {
 
-    char s1[] = "0123456789012345678901234567890";
+    char s1[50] = "The destination sentence. ";
+    char s2[] = "The source sentence.";
 
-    int length = strlen(s1);
+    strcat(s1, s2);
 
-    int num_is = 0;
-
-    for (int i = 0; i < length; i++)
-        if (s1[i] == '0') num_is++;
-
-    printf("length: %d\n", length);
-    printf("Number of 0 is: %d\n", num_is);
+    printf("s1: %s\n", s1);
 
     return 0;
 }
