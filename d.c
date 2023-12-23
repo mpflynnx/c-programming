@@ -1,16 +1,18 @@
 #include <stdio.h>
 
-int find_max(int a, int b);
+void print_two(float a, float b);
 
 int main(void)
 {
-    int result = find_max(10, 12) + 10;
-    printf("result: %d\n", result);
+
+    float x = 2.5;
+    float y = 4.2;
+    print_two(x, y);
     return 0;
 }
 
-int find_max(int a, int b)
+void print_two(float a, float b)
 {
-    if (a > b) return a;
-    else return b;
+    printf("%f\n%f\n", a, b);
+    // No return needed.
 }

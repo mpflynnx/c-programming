@@ -112,3 +112,35 @@ int find_max(int a, int b)
 ```
 
 The `main` function is now more prominent in the code, and the `find_max` function now appears below the `main` function.
+
+### Void functions
+
+A void function is a function that returns no value. Used to accept inputs from user or print text.
+
+`void` function declaration:
+
+```c
+void print_two(float a, float b);
+```
+
+**Full program:**
+```c
+#include <stdio.h>
+
+void print_two(float a, float b);
+
+int main(void)
+{
+
+    float x = 2.5;
+    float y = 4.2;
+    print_two(x, y);
+    return 0;
+}
+
+void print_two(float a, float b)
+{
+    printf("%f\n%f\n", a, b);
+    // No return needed.
+}
+```
