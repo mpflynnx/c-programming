@@ -1,26 +1,16 @@
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+
+int find_max(int a, int b);
 
 int main(void)
 {
-
-    char s[] = "ThIs Is tHe Way.";
-
-    printf("s: %s\n", s);
-
-
-    int length = strlen(s);
-
-    for (int i = 0; i < length; i++)
-    {
-        if (isupper(s[i])) 
-            s[i] = tolower(s[i]);
-        else if (islower(s[i]))
-            s[i] = toupper(s[i]);
-    }
-
-    printf("s: %s\n", s);
-
+    int result = find_max(10, 12) + 10;
+    printf("result: %d\n", result);
     return 0;
+}
+
+int find_max(int a, int b)
+{
+    if (a > b) return a;
+    else return b;
 }
