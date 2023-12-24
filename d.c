@@ -1,26 +1,23 @@
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+
+void add_one(int array[], int length);
 
 int main(void)
 {
 
-    char s[] = "ThIs Is tHe Way.";
+    int a[] = {2,4,9,1,3,5};
+    printf("a: %p\n", a);
 
-    printf("s: %s\n", s);
+    add_one(a, 6);
 
-
-    int length = strlen(s);
-
-    for (int i = 0; i < length; i++)
-    {
-        if (isupper(s[i])) 
-            s[i] = tolower(s[i]);
-        else if (islower(s[i]))
-            s[i] = toupper(s[i]);
-    }
-
-    printf("s: %s\n", s);
+    for (int i = 0; i < 6; i++)
+        printf("a[%d]=%d\n", i, a[i]);
 
     return 0;
+}
+
+void add_one(int array[], int length)
+{
+    printf("Array passed to function: %p\n", array); 
+    for(int i = 0; i < length; i++) array[i] += 1;
 }

@@ -53,6 +53,11 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Checking for string equality using strcmp](/docs/strings.md#checking-for-string-equality-using-strcmp)
     - [Finding the uppercase and lowercase letters in a string](/docs/strings.md#finding-the-uppercase-and-lowercase-letters-in-a-string)
     - [Convert uppercase letters to lowercase](/docs/strings.md#convert-uppercase-letters-to-lowercase)
+- [Functions](/docs/functions.md#functions)
+    - [Variable scope](/docs/functions.md#variable-scope)
+    - [Function definition](/docs/functions.md#function-definition)
+    - [Void functions](/docs/functions.md#void-functions)
+    - [Passing arrays to functions](/docs/functions.md#passing-arrays-to-functions)
 - [References](#references)
 
 
