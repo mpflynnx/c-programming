@@ -1,18 +1,23 @@
 #include <stdio.h>
 
-void print_two(float a, float b);
+void add_one(int array[], int length);
 
 int main(void)
 {
 
-    float x = 2.5;
-    float y = 4.2;
-    print_two(x, y);
+    int a[] = {2,4,9,1,3,5};
+    printf("a: %p\n", a);
+
+    add_one(a, 6);
+
+    for (int i = 0; i < 6; i++)
+        printf("a[%d]=%d\n", i, a[i]);
+
     return 0;
 }
 
-void print_two(float a, float b)
+void add_one(int array[], int length)
 {
-    printf("%f\n%f\n", a, b);
-    // No return needed.
+    printf("Array passed to function: %p\n", array); 
+    for(int i = 0; i < length; i++) array[i] += 1;
 }

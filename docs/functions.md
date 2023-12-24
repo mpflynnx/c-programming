@@ -144,3 +144,94 @@ void print_two(float a, float b)
     // No return needed.
 }
 ```
+
+### Passing arrays to functions
+
+We have seen that to create an array and assign values to it, we can use: -
+
+```c
+int a[] = {2,4,9,1,3,5};
+```
+
+In `C programming` this array `a` is not a variable that can be used in an expression, but a memory address in the computers memory.
+
+Printing `a` as shown below will output a hexadecimal number which is the memory address. The `%p` refers to the placeholder for a `pointer`.
+
+```c
+printf("a: %p\n", a);
+```
+
+**Output**
+```bash
+a: 0x7ffe9d685b70
+```
+
+To print the contents of an array, we need to iterate through every element and print the value.
+
+```c
+for (int i = 0; i < 6; i++)
+    printf("a[%d]=%d\n", i, a[i]);
+```
+
+**Ouput:**
+```bash
+a[0]=2
+a[1]=4
+a[2]=9
+a[3]=1
+a[4]=3
+a[5]=5
+```
+
+When we pass an array to a function we are passing the memory address (pointer) of the array.
+
+```c
+void add_one(int array[], int length)
+{
+    printf("array: %p\n", array); 
+    for(int i = 0; i < length; i++) array[i] += 1;
+}
+```
+The function above, takes in an array memory address and iterates through every index, incrementing the index value. 
+
+**Note** this may not be the desired outcome, as we may not always want to update the arrays contents.
+
+Putting this all together we have the program below:
+
+```c
+#include <stdio.h>
+
+void add_one(int array[], int length);
+
+int main(void)
+{
+
+    int a[] = {2,4,9,1,3,5};
+    printf("a: %p\n", a);
+
+    add_one(a, 6);
+
+    for (int i = 0; i < 6; i++)
+        printf("a[%d]=%d\n", i, a[i]);
+
+    return 0;
+}
+
+void add_one(int array[], int length)
+{
+    printf("Array passed to function: %p\n", array); 
+    for(int i = 0; i < length; i++) array[i] += 1;
+}
+```
+
+**Output:**
+```bash
+a: 0x7ffd1bccf360
+Array passed to function: 0x7ffd1bccf360
+a[0]=3
+a[1]=5
+a[2]=10
+a[3]=2
+a[4]=4
+a[5]=6
+```

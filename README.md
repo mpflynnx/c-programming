@@ -57,6 +57,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Variable scope](/docs/functions.md#variable-scope)
     - [Function definition](/docs/functions.md#function-definition)
     - [Void functions](/docs/functions.md#void-functions)
+    - [Passing arrays to functions](/docs/functions.md#passing-arrays-to-functions)
 - [References](#references)
 
 
