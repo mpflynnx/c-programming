@@ -5,19 +5,24 @@ void add_one(int array[], int length);
 int main(void)
 {
 
-    int a[] = {2,4,9,1,3,5};
-    printf("a: %p\n", a);
+    int a = 5;
+    int *p;
+    p = &a;
+    printf("p: %p\n", p);
+    printf("&a: %p\n", &a);
 
-    add_one(a, 6);
+    int b = 10;
+    printf("&b: %p\n", &b);
 
-    for (int i = 0; i < 6; i++)
-        printf("a[%d]=%d\n", i, a[i]);
+    a = a + *p;
+    printf("%d\n", *p);
+
+    p = &b;
+    printf("p: %p\n", p);
+
+    *p = *p + 1; // b = b + 1
+
+    printf("b: %d\n", b);
 
     return 0;
-}
-
-void add_one(int array[], int length)
-{
-    printf("Array passed to function: %p\n", array); 
-    for(int i = 0; i < length; i++) array[i] += 1;
 }

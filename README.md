@@ -58,6 +58,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Function definition](/docs/functions.md#function-definition)
     - [Void functions](/docs/functions.md#void-functions)
     - [Passing arrays to functions](/docs/functions.md#passing-arrays-to-functions)
+- [Pointers](/docs/pointers.md#pointers)
 - [References](#references)
 
 
