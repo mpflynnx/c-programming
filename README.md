@@ -60,6 +60,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Passing arrays to functions](/docs/functions.md#passing-arrays-to-functions)
 - [Pointers](/docs/pointers.md#pointers)
     - [Pass by pointer](/docs/pass-by-pointer.md#pass-by-pointer)
+    - [Pointer notation verses array notation](/docs/pointer-notation.md#pointer-notation)
 - [References](#references)
 
 
