@@ -1,43 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct
+{
+    char first_name[50];
+    char last_name[50];
+    int age;
+} Student;
+
+void age_student(Student *s);
+
 int main(void)
 {
+    Student *s1; //pointer to a Student type
 
-    int *numbers; // pointer to memory block to store numbers
-    int size = 2; // Initial size of memory block
-    numbers = malloc( sizeof(int) * size); // Create memory block for 2 integers
-    int input = 0; // Initial user input
-    int i = 0; // Counter for keeping track of the number of integers given by user
+    s1 = calloc(1, sizeof(Student));
 
-    do 
-    {
-        // Grow memory block, if number of integers given, exceeds existing block size
-        if (i == size)
-        {
-            size += 2; // Grow memory by 2
-            numbers = realloc(numbers, sizeof(int) * size); // Use realloc to grow memory block
-            printf("Realloc for %d integers\n", size);
-        }
-        printf("Enter (-1 to quit): ");
-        scanf("%d", &input);
-        if (input != -1) // Check for -1 entered by user
-        {
-            numbers[i] = input; // store given integer in memory
-            i++; // Keep track of number of integers
-        }
-    } while ( input != -1);
+    printf("Age: %d\n", (*s1).age );
 
-    // calculate average of all integers given
-    int num_elements = i;
-    int total = 0;
-    for (int j = 0; j < num_elements; j++)
-        total +=numbers[j];
+    age_student(s1);
 
-    printf("average: %d\n", total / num_elements);
+    printf("Age: %d\n", (*s1).age );
 
-    // free up the memory
-    free(numbers);
+    free(s1);
 
     return 0;
+}
+
+void age_student(Student *s)
+{
+    s->age += 1;
 }
