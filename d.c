@@ -4,21 +4,14 @@
 int main(int argc, char *argv[])
 {
 
-    if (argc == 3)
-    {
+    int a = 5;
+    int b = 2;
 
-        int num_times = atoi(argv[2]);
+    // double c = (double) a / b;
+    double c = a / 2.0;
 
-        for (int i = 0; i < num_times; i++)
-            printf("%s\n", argv[1]);
-    }
-    else 
-    {
-    printf("Invalid argument count! 2 arguments expected.\n");
-    printf("1st argument must be string.\n");
-    printf("2nd argument must be number.\n");
-    return 1;
-    }
+
+    printf("%d / %d = %f\n", a, b, c);
 
     return 0;
 }
