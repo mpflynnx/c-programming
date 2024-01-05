@@ -75,6 +75,14 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Using dynamic memory allocation with structs](/docs/typedef-and-struct.md#using-dynamic-memory-allocation-with-structs)
     - [Struct pass by reference](/docs/typedef-and-struct.md#struct-pass-by-reference)
     - [Structs pointers members](/docs/typedef-and-struct.md#struct-pointer-members)
+- [2D arrays](/docs/2d-arrays.md)
+    - [Nested loops](/docs/2d-arrays.md#nested-loops)
+    - [Using constants](/docs/2d-arrays.md#using-constants)
+    - [Populating a 2D array using scanf](/docs/2d-arrays.md#populating-a-2d-array-using-scanf)
+    - [2D arrays and functions](/docs/2d-arrays.md#2d-arrays-and-functions)
+    - [2D array pass by reference](/docs/2d-arrays.md#2d-array-pass-by-reference)
+
+
 - [References](#references)
 
 
