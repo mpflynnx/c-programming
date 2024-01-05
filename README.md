@@ -66,6 +66,15 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [calloc()](/docs/dynamically-allocated-memory.md#calloc)
     - [free()](/docs/dynamically-allocated-memory.md#free)
     - [realloc()](/docs/dynamically-allocated-memory.md#realloc)
+- [typedef and struct](/docs/typedef-and-struct.md)
+    - [struct](/docs/typedef-and-struct.md#struct)
+    - [Initialising struct members](/docs/typedef-and-struct.md#initialising-struct-members)
+    - [Using typedef with struct](/docs/typedef-and-struct.md#using-typedef-with-struct)
+    - [Passing a struct to a function](/docs/typedef-and-struct.md#passing-a-struct-to-a-function)
+    - [Problems with passing structs](/docs/typedef-and-struct.md#problems-with-passing-structs)
+    - [Using dynamic memory allocation with structs](/docs/typedef-and-struct.md#using-dynamic-memory-allocation-with-structs)
+    - [Struct pass by reference](/docs/typedef-and-struct.md#struct-pass-by-reference)
+    - [Structs pointers members](/docs/typedef-and-struct.md#struct-pointer-members)
 - [References](#references)
 
 

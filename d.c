@@ -1,43 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct
+{
+    int data;
+    int *array;
+} Info;
+
 int main(void)
 {
 
-    int *numbers; // pointer to memory block to store numbers
-    int size = 2; // Initial size of memory block
-    numbers = malloc( sizeof(int) * size); // Create memory block for 2 integers
-    int input = 0; // Initial user input
-    int i = 0; // Counter for keeping track of the number of integers given by user
+    Info a;
+    a.data = 7;
+    a.array = malloc(sizeof(int) * 5);
 
-    do 
-    {
-        // Grow memory block, if number of integers given, exceeds existing block size
-        if (i == size)
-        {
-            size += 2; // Grow memory by 2
-            numbers = realloc(numbers, sizeof(int) * size); // Use realloc to grow memory block
-            printf("Realloc for %d integers\n", size);
-        }
-        printf("Enter (-1 to quit): ");
-        scanf("%d", &input);
-        if (input != -1) // Check for -1 entered by user
-        {
-            numbers[i] = input; // store given integer in memory
-            i++; // Keep track of number of integers
-        }
-    } while ( input != -1);
+    // assign values to a.array
+    for (int i = 0; i < 5; i++)
+        a.array[i] = i + 1;
 
-    // calculate average of all integers given
-    int num_elements = i;
-    int total = 0;
-    for (int j = 0; j < num_elements; j++)
-        total +=numbers[j];
+    Info b = a;
+    a.data = 8; // Update a.data
 
-    printf("average: %d\n", total / num_elements);
+    printf("b.data: %d\n", b.data); // 7
 
-    // free up the memory
-    free(numbers);
+    // print b.array
+    for (int i = 0; i < 5; i++)
+        printf("b.array[%d] = %d\n", i, b.array[i]);
 
+    // assign new values to a.array
+    for (int i = 0; i < 5; i++)
+        a.array[i] = i + 2;
+
+    // print b.array
+    for (int i = 0; i < 5; i++)
+        printf("b.array[%d] = %d\n", i, b.array[i]);
+
+    printf("a.array: %p\n", a.array);
+    printf("b.array: %p\n", b.array);
+
+    free(a.array);
     return 0;
 }
