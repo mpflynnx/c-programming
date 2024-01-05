@@ -85,7 +85,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [Command-line arguments](/docs/command-line-arguments.md)
     - [Casting](/docs/command-line-arguments.md#casting)
     - [Validating command-line arguments](/docs/command-line-arguments.md#validating-command-line-arguments)
-
+- [Type casting](/docs/type-casting.md)
 
 - [References](#references)
 
