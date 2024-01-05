@@ -105,7 +105,7 @@ typedef struct
 } Point;
 ```
 
-The struct can then be intialised withput the need for the struct keyword.
+The struct can then be initialised without the need for the struct keyword.
 
 ```c
 Point p4 = {1, 2}; // {x = 1, y = 2}
@@ -122,7 +122,7 @@ typedef struct
 } Student;
 ```
 
-I can create a new `Student` type and can initailise the members as shown.
+I can create a new `Student` type and can initialise the members as shown.
 
 ```c
 Student s1;
@@ -150,7 +150,7 @@ typedef struct
 void print_student(Student s);
 ```
 
-we can now call from the main function the print_student function, passes in struct `Student` `s1`.
+we can now call from the main function the `print_student` function, passing in struct `Student` `s1`.
 
 ```c
 int main(void)
@@ -161,7 +161,7 @@ int main(void)
     strcpy(s1.first_name, "Devon");
     strcpy(s1.last_name, "Smith");
 
-    print_student(s1);
+    print_student(s1); // Call function
     
     return 0;
 }
@@ -269,5 +269,127 @@ Age: 0
 Age: 1
 ```
 
-### Structs can contain pointers
+### Struct pointer members
 
+If the struct does not contain pointer members, we can duplicate structs easily without problems. 
+
+```c
+typedef struct
+{
+    int data;
+} Info;
+```
+
+Create and initialise member `data`.
+
+```c
+Info a;
+a.data = 7;
+```
+
+Create a duplicate struct as shown:
+
+```c
+Info b; // Create new struct b
+b = a;  //  assign b struct a struct
+```
+
+`a.data` gets duplicated in memory as `b.data`. Changes to `a.data` will not effect `b.data`.
+
+```c
+printf("b.data: %d\n", b.data); // Output 7, same as a.data
+```
+We can give pointers as structs members. This pointer may be a pointer on some dynamically allocated memory on the heap.
+
+```c
+typedef struct
+{
+    int data;
+    int *array; // pointer
+} Info;
+```
+
+When we assign `a` struct to `b` struct the pointer value gets copied, the data does not get duplicated. Therefore the values of `b.array` is the actual `a.array` not a duplicate. Changes to the `a.array` will change the `b.array` as they are pointing to the same memory location.
+
+Create and initialise member `data` and member `array`.
+
+```c
+Info a;
+a.data = 7;
+a.array = malloc(sizeof(int) * 5);
+
+// assign values to a.array
+for (int i = 0; i < 5; i++)
+    a.array[i] = i + 1;
+```
+
+Create a duplicate struct and print the values of `b.data` and `b.array`.
+
+```c
+Info b = a;
+
+// print b.data
+printf("b.data: %d\n", b.data); // 7
+
+// print b.array
+for (int i = 0; i < 5; i++)
+    printf("b.array[%d] = %d\n", i, b.array[i]);
+```
+
+**Output**
+```bash
+b.data: 7
+b.array[0] = 1
+b.array[1] = 2
+b.array[2] = 3
+b.array[3] = 4
+b.array[4] = 5
+```
+
+Update `a.data` and `a.array` as shown.
+
+```c
+a.data = 8; // Update a.data
+
+// assign new values to a.array
+for (int i = 0; i < 5; i++)
+    a.array[i] = i + 2;
+```
+
+Print `b.data` and `b.array`.
+
+```c
+// print b.data
+printf("b.data: %d\n", b.data);
+
+// print b.array
+for (int i = 0; i < 5; i++)
+    printf("b.array[%d] = %d\n", i, b.array[i]);
+```
+
+**Output**
+```bash
+b.data: 7
+b.array[0] = 2
+b.array[1] = 3
+b.array[2] = 4
+b.array[3] = 5
+b.array[4] = 6
+```
+
+`b.data` remains 7, but `b.array` has changed because `a.array` was changed. `b.array` and `a.array` point to the same memory locations.
+
+To confirm, print out the values of `a.array` and `b.array`.
+
+```c
+printf("a.array: %p\n", a.array);
+printf("b.array: %p\n", b.array);
+```
+
+**Output**
+```bash
+a.array: 0x55a2bf79a2a0
+b.array: 0x55a2bf79a2a0
+```
+
+Confirmed `b.array` and `a.array` point to the same memory locations.

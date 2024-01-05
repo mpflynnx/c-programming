@@ -74,7 +74,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Problems with passing structs](/docs/typedef-and-struct.md#problems-with-passing-structs)
     - [Using dynamic memory allocation with structs](/docs/typedef-and-struct.md#using-dynamic-memory-allocation-with-structs)
     - [Struct pass by reference](/docs/typedef-and-struct.md#struct-pass-by-reference)
-    - [Structs can contain pointers](/docs/typedef-and-struct.md#structs-can-contain-pointers)
+    - [Structs pointers members](/docs/typedef-and-struct.md#struct-pointer-members)
 - [References](#references)
 
 

@@ -3,31 +3,41 @@
 
 typedef struct
 {
-    char first_name[50];
-    char last_name[50];
-    int age;
-} Student;
-
-void age_student(Student *s);
+    int data;
+    int *array;
+} Info;
 
 int main(void)
 {
-    Student *s1; //pointer to a Student type
 
-    s1 = calloc(1, sizeof(Student));
+    Info a;
+    a.data = 7;
+    a.array = malloc(sizeof(int) * 5);
 
-    printf("Age: %d\n", (*s1).age );
+    // assign values to a.array
+    for (int i = 0; i < 5; i++)
+        a.array[i] = i + 1;
 
-    age_student(s1);
+    Info b = a;
+    a.data = 8; // Update a.data
 
-    printf("Age: %d\n", (*s1).age );
+    printf("b.data: %d\n", b.data); // 7
 
-    free(s1);
+    // print b.array
+    for (int i = 0; i < 5; i++)
+        printf("b.array[%d] = %d\n", i, b.array[i]);
 
+    // assign new values to a.array
+    for (int i = 0; i < 5; i++)
+        a.array[i] = i + 2;
+
+    // print b.array
+    for (int i = 0; i < 5; i++)
+        printf("b.array[%d] = %d\n", i, b.array[i]);
+
+    printf("a.array: %p\n", a.array);
+    printf("b.array: %p\n", b.array);
+
+    free(a.array);
     return 0;
-}
-
-void age_student(Student *s)
-{
-    s->age += 1;
 }
