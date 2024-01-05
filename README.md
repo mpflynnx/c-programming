@@ -82,6 +82,9 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [2D arrays and functions](/docs/2d-arrays.md#2d-arrays-and-functions)
     - [2D array pass by reference](/docs/2d-arrays.md#2d-array-pass-by-reference)
 - [Main function return values](/docs/main-function-return-values.md)
+- [Command-line arguments](/docs/command-line-arguments.md)
+    - [Casting](/docs/command-line-arguments.md#casting)
+    - [Validating command-line arguments](/docs/command-line-arguments.md#validating-command-line-arguments)
 
 
 - [References](#references)
