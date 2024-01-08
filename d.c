@@ -1,21 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int x = 10;
-
-void func();
+#define LINE_BUFFER 100
 
 int main(int argc, char *argv[])
 {
-    int x = 20;
-    printf("main x: %d\n", x);
-    func();
+
+    char buffer[LINE_BUFFER];
+    printf("Enter: ");
+    // scanf("%s", buffer); // Stops at first space
+    fgets(buffer, 100, stdin);
+    printf("Buffer: %s\n", buffer);
     return 0;
 }
-
-void func()
-{
-    x++;
-    printf("func x: %d\n", x);
-}
-
