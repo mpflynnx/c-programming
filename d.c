@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define LINE_BUFFER 100
+
 int main(int argc, char *argv[])
 {
 
@@ -13,11 +15,11 @@ int main(int argc, char *argv[])
     }
     else 
     {
-        char buffer[100];
+        char buffer[LINE_BUFFER];
         int data[10];
         int i = 0;
         printf("...Printing file contents...\n");
-        while (fgets( buffer, 100, fh_read) != NULL)
+        while (fgets( buffer, LINE_BUFFER, fh_read) != NULL)
         {
             printf("%s", buffer);
             data[i] = atoi(buffer);
