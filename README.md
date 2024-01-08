@@ -91,6 +91,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Using loops to write to file](/docs/file-input-output.md#using-loops-to-write-to-files)
     - [Adding content to a file](/docs/file-input-output.md#adding-content-to-a-file)
     - [Reading from a file](/docs/file-input-output.md#reading-from-a-file)
+- [Constants](/docs/constants.md)
 - [References](#references)
 
 
