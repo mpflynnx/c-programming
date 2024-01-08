@@ -88,7 +88,9 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [Type casting](/docs/type-casting.md)
 - [File Input/Output](/docs/file-input-output.md)
     - [Writing to files on the local filesystem](/docs/file-input-output.md#writing-to-files-on-the-local-filesystem)
-
+    - [Using loops to write to file](/docs/file-input-output.md#using-loops-to-write-to-files)
+    - [Adding content to a file](/docs/file-input-output.md#adding-content-to-a-file)
+    - [Reading from a file](/docs/file-input-output.md#reading-from-a-file)
 - [References](#references)
 
 
