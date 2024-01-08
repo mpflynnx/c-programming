@@ -86,7 +86,11 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Casting](/docs/command-line-arguments.md#casting)
     - [Validating command-line arguments](/docs/command-line-arguments.md#validating-command-line-arguments)
 - [Type casting](/docs/type-casting.md)
-
+- [File Input/Output](/docs/file-input-output.md)
+    - [Writing to files on the local filesystem](/docs/file-input-output.md#writing-to-files-on-the-local-filesystem)
+    - [Using loops to write to file](/docs/file-input-output.md#using-loops-to-write-to-files)
+    - [Adding content to a file](/docs/file-input-output.md#adding-content-to-a-file)
+    - [Reading from a file](/docs/file-input-output.md#reading-from-a-file)
 - [References](#references)
 
 
@@ -97,3 +101,4 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [C_Programming - Simple_input_and_output](https://en.wikibooks.org/wiki/C_Programming/Simple_input_and_output)
 - [C Library - <string.h>](https://www.tutorialspoint.com/c_standard_library/string_h.htm)
 - [C Library - <ctype.h>](https://www.tutorialspoint.com/c_standard_library/ctype_h.htm)
+- [C - File I/O](https://www.tutorialspoint.com/cprogramming/c_file_io.htm)
