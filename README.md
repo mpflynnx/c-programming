@@ -92,6 +92,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Adding content to a file](/docs/file-input-output.md#adding-content-to-a-file)
     - [Reading from a file](/docs/file-input-output.md#reading-from-a-file)
 - [Constants](/docs/constants.md)
+- [Global scope variables](/docs/global-scope-variables.md)
+    - [Matching global scoped and function scoped variable names](/docs/global-scope-variables.md#matching-global-scoped-and-function-scoped-variable-names)
 - [References](#references)
 
 
