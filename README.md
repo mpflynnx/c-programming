@@ -94,6 +94,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [Constants](/docs/constants.md)
 - [Global scope variables](/docs/global-scope-variables.md)
     - [Matching global scoped and function scoped variable names](/docs/global-scope-variables.md#matching-global-scoped-and-function-scoped-variable-names)
+- [User inputs with spaces]()
 - [References](#references)
 
 
