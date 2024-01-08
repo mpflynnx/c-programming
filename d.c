@@ -4,14 +4,18 @@
 int main(int argc, char *argv[])
 {
 
-    int a = 5;
-    int b = 2;
-
-    // double c = (double) a / b;
-    double c = a / 2.0;
-
-
-    printf("%d / %d = %f\n", a, b, c);
+    FILE *fh_write;
+    fh_write = fopen("write.txt", "w");
+    if (fh_write == NULL)
+    {
+    printf("Error opening file!\n");
+    return 1;
+    }
+    else 
+    {
+        fprintf(fh_write, "Hello, world!\n");
+        fclose(fh_write);
+    }
 
     return 0;
 }
