@@ -14,7 +14,34 @@ float x = 5.2;
 double y = -9.8;
 ```
 
-`double` can store numbers with a higher level of precision, i,e more accuracy. `double` has a greater range, more decimal places. Better for high accuracy calculations, but uses more computer memory.
+`double` can store numbers with a higher level of precision, i.e more accuracy. `double` has a greater range, more decimal places. Better for high accuracy calculations, but uses more computer memory.
+
+### Modifiers
+
+We can assign modifiers to char, init, float and double types. These modifiers are signed, unsigned, short and long.
+
+- unsigned, makes the numbers only positive.  `unsigned int` contains at least the [0, 65,535] range. Uses 16 bits.
+
+```c
+unsigned int;
+```
+
+- signed, makes the number both negative and positive. Same effect as using just int with no modifiers.
+
+
+- short, reduces the maximum number that can be stored, to save bits. Capable of containing at least the [−32,767, +32,767] range. Uses 16 bits to store short int.
+
+```c
+short int;
+```
+
+- long, capable of containing at least the [−2,147,483,647, +2,147,483,647] range. Use 32 bits to store long int.
+
+```c
+long int;
+```
+
+### scanf use with float and double
 
 Using the `scanf` function with floats. Placeholder for `float` is `%f`. 
 
@@ -22,7 +49,6 @@ Using the `scanf` function with floats. Placeholder for `float` is `%f`.
 printf("x: ");
 scanf("%f, &x); // store float in variable x
 ```
-
 
 Using the `printf` function with floats. Placeholder for `float` is `%f`. 
 
@@ -104,10 +130,15 @@ y: -10.880000
 
 ### char variable
 
-`char` variable. For storing characters, must be assigned in single quotes. char are fundamentally integer values. Using the ASCII code which is a integer. For example the ASCII code for `d` is 100.
+`char` variable. For storing characters, must be assigned in single quotes. `char` are fundamentally integer values. Using the ASCII code which is a integer. For example the ASCII code for `d` is 100.
 
 ```c
-char c = 'd';
+char c = 'd'; // ASCII 100
+```
+
+The ASCII code can also be used.
+```c
+char c = 100; // 'd'
 ```
 
 ### printf and scanf with char variables
