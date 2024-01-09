@@ -231,3 +231,55 @@ i: -151245
 `i` is being decremented continuously. The loop will never get to `i` being greater than 20.
 
 This program will never end. Press keys, Control + c to force the program to exit.
+
+### while loop with break
+
+The `break` keyword can be used inside a `while` loop block. This will end the iteration when a condition is true.
+
+```c
+int i = 0;
+
+while (i < 10) 
+{
+    i++;
+    printf("i: %d\n", i);
+    if (i == 5) break; // loop ends when i == 5
+}
+```
+
+**Output**
+```bash
+i: 1
+i: 2
+i: 3
+i: 4
+i: 5
+
+### while loop with continue
+
+The `continue` keyword can be used inside a `while` loop block. This will skip over the loop body when a condition is true, and restart the iteration.
+
+```c
+int i = 0;
+
+while (i < 10) 
+{
+    i++;
+    if (i == 5) continue; // skips the remaining when i == 5
+    printf("i: %d\n", i); // skipped if i == 5
+
+}
+```
+
+**Output**
+```bash
+i: 1
+i: 2
+i: 3
+i: 4
+i: 6
+i: 7
+i: 8
+i: 9
+i: 10
+```
