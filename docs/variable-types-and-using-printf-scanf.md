@@ -47,7 +47,7 @@ Using the `scanf` function with floats. Placeholder for `float` is `%f`.
 
 ```c
 printf("x: ");
-scanf("%f, &x); // store float in variable x
+scanf("%f, &x); // store float in variable x memory location.
 ```
 
 Using the `printf` function with floats. Placeholder for `float` is `%f`. 
@@ -66,7 +66,7 @@ int main(void)
     double y = -9.8;
 
     printf("Enter value for x: ");
-    scanf("%f", &x); // Get float from user assign to x
+    scanf("%f", &x); // Get float from user assign to x memory location
     printf("x: %f\n", x); // print x
 
 }
@@ -110,7 +110,7 @@ To use `double` with `printf` we can also user `%lf` but `%f` will also work.
 
 ```c
     printf("Enter value for y: ");
-    scanf("%lf", &y); // Get double from user assign to y
+    scanf("%lf", &y); // Get double from user, assign to y memory location
     printf("y: %lf\n", y); // print y
 
 }

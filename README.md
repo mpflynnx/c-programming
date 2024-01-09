@@ -18,6 +18,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [printf field width](/docs/printf.md#printf-field-width)
     - [printf flags](/docs/printf.md#printf-flags)
     - [printf real number precision](/docs/printf.md#printf-real-number-precision)
+- [scanf](/docs/scanf.md)
+    - [Use scanf to read in multiple numbers](/docs/scanf.md#use-scanf-to-read-in-multiple-numbers)
 - [Arithmetic operators](/docs/arithmetic-operators.md)
     - [Common operators](/docs/arithmetic-operators.md#common-operators)
     - [Modulus operator](/docs/arithmetic-operators.md#modulus-operator)

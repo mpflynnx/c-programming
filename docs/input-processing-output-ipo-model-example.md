@@ -69,7 +69,7 @@ A better approach is to ask the user for the variable values speed and time, the
 
 To do this we can use `scanf` function. This is also in the `stdio.h` library.
 
-Other functions exist that do similar to `scanf`.
+`scanf` has several limitations, other functions exist that do overcome these limitations.
 
 `scanf` works similar to `printf` but backward.
 
@@ -92,9 +92,15 @@ Ask user to enter value for speed.
 
 Ask user to enter value for time.
 
+Expects integer %d from input. 
+
+`scanf` will then assign the user input to the `time` variables memory location.
+
+`&` operator in front of a variable name, returns the memory location.
+
 ```c
     printf("Enter value for time: ");
-    // Expects integer %d from input, will assign to time variable using & operator.
+    
     scanf("%d", &time);
 ```
 
