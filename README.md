@@ -37,6 +37,8 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Find average of numbers using while loop](/docs/while-loops.md#find-average-of-numbers-using-while-loop)
     - [Indefinite loop using a while loop](/docs/while-loops.md#indefinite-loop-using-a-while-loop)
     - [Infinite loop](/docs/while-loops.md#infinite-loop)
+    - [while loop with break](/docs/while-loops.md#while-loop-with-break)
+    - [while loop with continue](/docs/while-loops.md#while-loop-with-continue)
 - [Do while loops](/docs/do-while-loops.md)
     - [Simple do while loop example](/docs/do-while-loops.md#simple-do-while-loop-example)
     - [Do while loop used to validate user input](/docs/do-while-loops.md#do-while-loop-used-to-validate-user-input)
