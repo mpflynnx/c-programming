@@ -1,15 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-#define LINE_BUFFER 100
+long int factorial(int n);
 
-int main(int argc, char *argv[])
+int main(void)
 {
 
-    char buffer[LINE_BUFFER];
-    printf("Enter: ");
-    // scanf("%s", buffer); // Stops at first space
-    fgets(buffer, 100, stdin);
-    printf("Buffer: %s\n", buffer);
+    int n = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Factorial of %d = %ld\n", n, factorial(n));
+
     return 0;
+}
+
+long int factorial(int n)
+{
+    if (n == 1) return 1;
+    return n * factorial(n-1);
 }
