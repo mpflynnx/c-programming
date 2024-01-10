@@ -106,7 +106,10 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Writing to files on the local filesystem](/docs/file-input-output.md#writing-to-files-on-the-local-filesystem)
     - [Using loops to write to file](/docs/file-input-output.md#using-loops-to-write-to-files)
     - [Adding content to a file](/docs/file-input-output.md#adding-content-to-a-file)
-    - [Reading from a file](/docs/file-input-output.md#reading-from-a-file)
+    - [Reading text from a file using fgets()](/docs/file-input-output.md#reading-text-from-a-file-using-fgets)
+    - [Reading integers from a file using fscanf()](/docs/file-input-output.md#reading-integers-from-a-file-using-fscanf)
+    - [Reading integers from a file using fgets()](/docs/file-input-output.md#reading-integers-from-a-file-using-fgets)
+
 - [Constants](/docs/constants.md)
 - [Global scope variables](/docs/global-scope-variables.md)
     - [Matching global scoped and function scoped variable names](/docs/global-scope-variables.md#matching-global-scoped-and-function-scoped-variable-names)
