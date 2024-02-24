@@ -4,7 +4,6 @@
 void reverse_array(int* arr, int size);
 void display_array(int array[], int size);
 
-
 int main(void){
 
     // first array to reverse
@@ -56,8 +55,6 @@ void reverse_array(int* arr, int size)
         // Move the pointers towards the center break loop when *start == *end
         start++;
         end--;
-    }
-
 }
 
 /*

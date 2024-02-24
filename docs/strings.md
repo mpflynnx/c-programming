@@ -3,6 +3,12 @@
 Strings in C are `char` type arrays that end with a null type terminator `\0`. This terminator signifies the end of the string.
 
 ```c
+char mydata[] = "Hello";
+```
+
+Equivalent to:
+
+```c
 char mydata[] = {'H', 'e', 'l', 'l', 'o', '\0'};
 ```
 
