@@ -56,6 +56,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Updating an Array element](/docs/arrays.md#updating-an-array-element)
     - [Initialising Arrays](/docs/arrays.md#initialising-arrays)
     - [Common errors using Arrays](/docs/arrays.md#common-errors-using-arrays)
+    - [Reverse an array program](/docs/reverse-array.md)
 - [Strings](/docs/strings.md)
     - [Printing strings](/docs/strings.md#printing-strings)
     - [Printing a char array](/docs/strings.md#printing-a-char-array)
@@ -113,7 +114,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [Constants](/docs/constants.md)
 - [Global scope variables](/docs/global-scope-variables.md)
     - [Matching global scoped and function scoped variable names](/docs/global-scope-variables.md#matching-global-scoped-and-function-scoped-variable-names)
-- [User inputs with spaces]()
+- [User inputs with spaces](/docs/user-inputs-with-spaces.md)
 - [References](#references)
 
 
