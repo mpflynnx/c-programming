@@ -36,7 +36,6 @@ Reverse an array function
 //         arr[i] = arr[size - i - 1]; // left hand side
 //         arr[size - i - 1] = temp; // right hand side
 //     }
-
 // }
 
 /* 
