@@ -55,6 +55,7 @@ void reverse_array(int* arr, int size)
         // Move the pointers towards the center break loop when *start == *end
         start++;
         end--;
+    }
 }
 
 /*
