@@ -36,7 +36,6 @@ Reverse an array function
 //         arr[i] = arr[size - i - 1]; // left hand side
 //         arr[size - i - 1] = temp; // right hand side
 //     }
-
 // }
 
 /* 
@@ -55,6 +54,7 @@ void reverse_array(int* arr, int size)
         // Move the pointers towards the center break loop when *start == *end
         start++;
         end--;
+    }
 }
 
 /*
