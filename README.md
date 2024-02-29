@@ -115,6 +115,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [Global scope variables](/docs/global-scope-variables.md)
     - [Matching global scoped and function scoped variable names](/docs/global-scope-variables.md#matching-global-scoped-and-function-scoped-variable-names)
 - [User inputs with spaces](/docs/user-inputs-with-spaces.md)
+- [Debugging with gdb](/docs/debugging-with-gdb.md)
 - [References](#references)
 
 
