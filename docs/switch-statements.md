@@ -31,7 +31,7 @@ Case 0!
 Case 1!
 ```
 
-Once the first matching case is found then subsequent case statements are also executed. This is known as full through logic. We can prevent this using `break;` statement as shown.
+Once the first matching case is found then subsequent case statements are also executed. This is known as fall through logic. We can prevent this using `break;` statement as shown.
 
 ```c
 #include <stdio.h>
@@ -96,5 +96,50 @@ Default case!
 ```
 
 As the `default` is last is doesn't need a `break`.
+
+### Using fall through logic
+
+As seen once the first match has been found the subsequent case statement are executed.
+
+Here is a program which will count the number of `a` letters and the number of vowels in a string.
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main(void)
+{
+    char s[] = "aeioxyz";
+
+    int length = strlen(s);
+
+    int a = 0;
+    int vowel = 0;
+
+    for (int i = 0; i < length; i++)
+    {
+        switch (toupper(s[i])) 
+        {
+            case 'A':
+                a++;
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+                vowel++;
+        }
+    }
+
+    printf("a: %d, vowels: %d\n", a, vowel);
+}
+```
+
+**Output**
+```bash
+a: 1, vowels: 4
+```
+
+No break statements are used, the vowel counter is incremented when s[i] contains a vowel.
 
 Some programmers favour `If` statements as they are easily to understand and can provide the same functionality.
