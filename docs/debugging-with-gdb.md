@@ -50,21 +50,24 @@ $ gcc -g -o main.exe main.c
 
 ### Starting and quitting the debugger
 
-Starting the Debugger.
+Starting the debugger using the command-line interface.
 ```bash
 $ gdb main.exe
 ```
-Type c to continue then you are presented with the gdb prompt (gdb) as shown below.
+Type c to continue, then you are presented with the gdb prompt (gdb) as shown below.
 
 ```bash
+...
 Reading symbols from d...
 (gdb)
 ```
-Quitting the Debugger.
+
+Quitting a running program.
 ```bash
 (gdb) quit // alternatively q 
 ```
-Quitting a running program.
+Quitting the Debugger.
+If a program is not running.
 ```bash
 (gdb) quit // alternatively q 
 ```
@@ -74,7 +77,7 @@ View gdb documentation.
 ```bash
 (gdb) help // alternatively h
 ```
-View help documentation on breakpoint commands
+View help documentation on breakpoint commands.
 ```bash
 (gdb) help breakpoints // alternatively h breakpoints
 ```
