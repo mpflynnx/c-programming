@@ -1,43 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 typedef struct
 {
-    int data;
-    int *array;
-} Info;
+    double x;
+    double y;
+    double z;
+}Point3d;
 
-int main(void)
+Point3d getZeroPoint()
 {
+    // We can create a variable and return the variable (we'll improve this below)
+    // Point3d temp = { 0.0, 0.0, 0.0 };
+    // return temp;
+    // return (Point3d){0.0, 0.0, 0.0};
+    return (Point3d){};
+}
 
-    Info a;
-    a.data = 7;
-    a.array = malloc(sizeof(int) * 5);
+int main()
+{
+    Point3d zero = getZeroPoint();
 
-    // assign values to a.array
-    for (int i = 0; i < 5; i++)
-        a.array[i] = i + 1;
+    if (zero.x == 0.0 && zero.y == 0.0 && zero.z == 0.0)
+        printf("The point is zero\n");
+    else
+        printf("The point is not zero\n");
 
-    Info b = a;
-    a.data = 8; // Update a.data
-
-    printf("b.data: %d\n", b.data); // 7
-
-    // print b.array
-    for (int i = 0; i < 5; i++)
-        printf("b.array[%d] = %d\n", i, b.array[i]);
-
-    // assign new values to a.array
-    for (int i = 0; i < 5; i++)
-        a.array[i] = i + 2;
-
-    // print b.array
-    for (int i = 0; i < 5; i++)
-        printf("b.array[%d] = %d\n", i, b.array[i]);
-
-    printf("a.array: %p\n", a.array);
-    printf("b.array: %p\n", b.array);
-
-    free(a.array);
     return 0;
 }
