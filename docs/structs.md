@@ -3,13 +3,19 @@
 ## Table of Contents
 
 - [Structs](#structs)
+    - [Using structs throughout a multi-file program](#using-structs-throughout-a-multi-file-program)
     - [Initialising struct members](#initialising-struct-members)
+    - [Missing initialisers in an initialiser list](#missing-initialisers-in-an-initialiser-list)
+    - [Initialising a struct with another struct of the same type](#initialising-a-struct-with-another-struct-of-the-same-type)
+    - [Const structs](#const-structs)
     - [Using typedef with struct](#using-typedef-with-struct)
-    - [Passing a struct to a function](#passing-a-struct-to-a-function)
+    - [Passing structs (by value)](#passing-structs-by-value)
     - [Problems with passing structs](#problems-with-passing-structs)
+    - [Passing structs (by pointer/reference)](#passing-structs-by-pointerreference)
     - [Using dynamic memory allocation with structs](#using-dynamic-memory-allocation-with-structs)
     - [Struct pass by reference](#struct-pass-by-reference)
     - [Structs pointers members](#struct-pointer-members)
+    - [Returning structs](#returning-structs)
 
 - [External References](#external-references)
 
@@ -96,7 +102,7 @@ struct Point p4 =
 **Best practice**
 When adding a new member to an aggregate, it’s safest to add it to the bottom of the definition list so the initialisers for other members don’t shift.
 
-#### Missing initialisers in an initialiser list
+### Missing initialisers in an initialiser list
 
 If an [aggregate](https://www.learncpp.com/cpp-tutorial/struct-aggregate-initialization/#aggregate) is initialised but the number of initialisation values is fewer than the number of members, then all remaining members will be value-initialized.
 
@@ -128,7 +134,7 @@ This means we can use an empty initialisation list to value-initialise all membe
 struct Employee joe = {}; // value-initialise all members
 ```
 
-#### Initialising a struct with another struct of the same type
+### Initialising a struct with another struct of the same type
 
 A struct may also be initialised using another struct of the same type:
 
