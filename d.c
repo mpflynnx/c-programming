@@ -1,29 +1,27 @@
 #include <stdio.h>
 
-typedef struct
+struct Foo1
 {
-    double x;
-    double y;
-    double z;
-}Point3d;
+    short a; // will have 2 bytes of padding after a
+    int b;
+    short c; // will have 2 bytes of padding after c
+};
 
-Point3d getZeroPoint()
+struct Foo2
 {
-    // We can create a variable and return the variable (we'll improve this below)
-    // Point3d temp = { 0.0, 0.0, 0.0 };
-    // return temp;
-    // return (Point3d){0.0, 0.0, 0.0};
-    return (Point3d){};
-}
+    int b;
+    short a;
+    short c;
+};
 
 int main()
 {
-    Point3d zero = getZeroPoint();
+    struct Foo1 foo1 = {0,0,0}; // prints 12
+    struct Foo2 foo2 = {0,0,0}; // prints 8
 
-    if (zero.x == 0.0 && zero.y == 0.0 && zero.z == 0.0)
-        printf("The point is zero\n");
-    else
-        printf("The point is not zero\n");
+    printf("The size of Foo1 is %ld bytes\n", sizeof(foo1));
+    printf("The size of Foo2 is %ld bytes\n", sizeof(foo2));
 
     return 0;
 }
+

@@ -16,6 +16,7 @@
     - [Struct pass by reference](#struct-pass-by-reference)
     - [Structs pointers members](#struct-pointer-members)
     - [Returning structs](#returning-structs)
+    - [Struct size and data structure alignment](#struct-size-and-data-structure-alignment)
 
 - [External References](#external-references)
 
@@ -586,7 +587,90 @@ In this case, a temporary Point3d is constructed, copied back to the caller, and
 
 Learn anonymous objects in more detail at [learncpp.com | Temporary class objects](https://www.learncpp.com/cpp-tutorial/temporary-class-objects/)
 
+### Struct size and data structure alignment
+
+Typically, the size of a struct is the sum of the size of all its members, but not always!
+
+Consider the following program:
+
+```c
+#include <stdio.h>
+
+struct Foo
+{
+    short a;
+    int b;
+    double c;
+};
+
+int main()
+{
+    struct Foo foo = {0,0,0.0};
+    printf("The size of short is %ld bytes\n", sizeof(short));
+    printf("The size of int is %ld bytes\n", sizeof(int));
+    printf("The size of double is %ld bytes\n", sizeof(double));
+    printf("The size of Foo is %ld bytes\n", sizeof(foo));
+
+    return 0;
+}
+```
+
+**Output**
+```bash
+The size of short is 2 bytes
+The size of int is 4 bytes
+The size of double is 8 bytes
+The size of Foo is 16 bytes
+```
+Note that the size of short + int + double is 14 bytes, but the size of Foo is 16 bytes!
+
+It turns out, we can only say that the size of a struct will be at least as large as the size of all the variables it contains. But it could be larger! For performance reasons, the compiler will sometimes add gaps into structures (this is called padding).
+
+In the Foo struct above, the compiler is invisibly adding 2 bytes of padding after member a, making the size of the structure 16 bytes instead of 14.
+
+This can actually have a pretty significant impact on the size of the struct, as the following program demonstrates:
+
+```c
+#include <stdio.h>
+
+struct Foo1
+{
+    short a; // will have 2 bytes of padding after a
+    int b;
+    short c; // will have 2 bytes of padding after c
+};
+
+struct Foo2
+{
+    int b;
+    short a;
+    short c;
+};
+
+int main()
+{
+    struct Foo1 foo1 = {0,0,0}; // prints 12
+    struct Foo2 foo2 = {0,0,0}; // prints 8
+
+    printf("The size of Foo1 is %ld bytes\n", sizeof(foo1));
+    printf("The size of Foo2 is %ld bytes\n", sizeof(foo2));
+
+    return 0;
+}
+```
+
+**Output**
+```bash
+The size of Foo1 is 12 bytes
+The size of Foo2 is 8 bytes
+```
+
+Note that Foo1 and Foo2 have the same members, the only difference being the declaration order. Yet Foo1 is 50% larger due to the added padding.
+
 [Jump to top](#table-of-contents)
+
+**Tip** 
+You can minimize padding by defining your members in decreasing order of size. The compiler is not allowed to reorder members, so this has to be done manually.
 
 ## External References
 
@@ -596,3 +680,4 @@ Learn anonymous objects in more detail at [learncpp.com | Temporary class object
  - [learncpp.com | Passing and returning structs](https://www.learncpp.com/cpp-tutorial/passing-and-returning-structs/)
  - [strcpy](https://www.tutorialspoint.com/c_standard_library/c_function_strcpy.htm)
  - [learncpp.com | Temporary class objects](https://www.learncpp.com/cpp-tutorial/temporary-class-objects/)
+ - [learncpp.com | Struct miscellany](https://www.learncpp.com/cpp-tutorial/struct-miscellany/)
