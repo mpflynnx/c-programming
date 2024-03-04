@@ -85,6 +85,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [realloc()](/docs/dynamically-allocated-memory.md#realloc)
 - [Typedefs](/docs/typedef-and-struct.md)
 - [Structs](/docs/structs.md)
+- [Unions](/docs/unions.md)
 - [2D arrays](/docs/2d-arrays.md)
     - [Nested loops](/docs/2d-arrays.md#nested-loops)
     - [Using constants](/docs/2d-arrays.md#using-constants)
