@@ -1,32 +1,38 @@
 ## Input Processing Output (IPO) Model example
 
-Declare a integer variable named `speed`
+Declare an integer variable named `speed`
 
 ```c
 int speed;
 ```
 
-Assign value to variable, initalise the variable.
+Assign value to variable, initialise the variable.
 
 ```c
-int speed = 20; // km
+int speed = 20; // km/h
 ```
 
-Assign value to variable time, initalise the variable.
+Assign value to variable time, initialise the variable.
 
 ```c
 int time = 7; // hours
 ```
 
+Can declare and initialise on one line multiple variables of same type.
+
+```c
+int speed = 20, time = 7, distance = 5;
+```
+
 Use expression to calculate distance
 
 ```c
-int distance = speed * time; // 140
+int distance = speed * time; // result = 140
 ```
 
 Output results of distance variable.
 
-In c you cannot do this:
+In `c` you cannot do this:
 
 printf(distance); // invalid in c
 
@@ -63,7 +69,7 @@ A better approach is to ask the user for the variable values speed and time, the
 
 To do this we can use `scanf` function. This is also in the `stdio.h` library.
 
-Other functions exist that do similar to `scanf`.
+`scanf` has several limitations, other functions exist that do overcome these limitations.
 
 `scanf` works similar to `printf` but backward.
 
@@ -86,9 +92,15 @@ Ask user to enter value for speed.
 
 Ask user to enter value for time.
 
+Expects integer %d from input. 
+
+`scanf` will then assign the user input to the `time` variables memory location.
+
+`&` operator in front of a variable name, returns the memory location.
+
 ```c
     printf("Enter value for time: ");
-    // Expects integer %d from input, will assign to time variable using & operator.
+    
     scanf("%d", &time);
 ```
 
@@ -104,4 +116,4 @@ distance: 20
 $
 ```
 
-Program can be run multiple times with user entering different values without need for recompilation.
+The program can be run multiple times with user entering different values without need for recompilation.

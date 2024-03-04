@@ -1,21 +1,21 @@
 ## Pointers
 
-A Pointer can be used to store a memory address of a variable.
+A pointer can be used to store a memory address of a variable.
 
 ```c
 int *p; // New pointer to store a int type variable
 ```
 
-To store a memory address to an int type variable we used & operator.
+To store a memory address to an int type variable we used the `&` operator.
 
 ```c
 int a = 5;
 p = &a; // Assign memory address of a to p
 ```
 
-Pointer p points to a, which is a int type.
+Pointer `p` points to `a`, which is a int type.
 
-To print the pointers value we use the %p placeholder.
+To print the pointers value we use the `%p` placeholder.
 
 ```c
 printf("p: %p\n", p);
@@ -61,7 +61,7 @@ This is due to the stack structure, last in first out. The variable defined firs
 
 ## Dereferencing the pointer
 
-To retrieve the value of the variable pointed to by the pointer variable we use * operator.
+To retrieve the value of the variable pointed to by the pointer variable we use `*` operator.
 
 ```c
 printf("%d\n", *p); // 5
@@ -75,6 +75,7 @@ printf("%d\n", *p); // 10
 ```
 
 ## Changing a pointers value
+We can change the value of the `p` pointer.
 
 ```c
 int b = 10;
@@ -90,10 +91,10 @@ p: 0x7ffe1a33d0d8   // p points to a
 p: 0x7ffe1a33d0dc   // p now points to b
 ```
 
-## Using pointers example
+### Using pointers example
 
 ```c
-*p = *p + 1; // Equivalent to: b = b + 1
+*p = *p + 1; // Equivalent to: b = 10 + 1
 printf("b: %d\n", b);
 ```
 

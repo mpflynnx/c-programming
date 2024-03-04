@@ -1,28 +1,32 @@
 #include <stdio.h>
 
-void add_one(int array[], int length);
-
-int main(void)
+struct Foo1
 {
+    short a; // will have 2 bytes of padding after a
+    int b;
+    short c; // will have 2 bytes of padding after c
+};
 
-    int a = 5;
-    int *p;
-    p = &a;
-    printf("p: %p\n", p);
-    printf("&a: %p\n", &a);
+struct Foo2
+{
+    int b;
+    short a;
+    short c;
+};
 
-    int b = 10;
-    printf("&b: %p\n", &b);
+int main()
+{
+    struct Foo1 foo1 = {0,0,0}; // prints 12
+    struct Foo2 foo2 = {0,0,0}; // prints 8
 
-    a = a + *p;
-    printf("%d\n", *p);
-
-    p = &b;
-    printf("p: %p\n", p);
-
-    *p = *p + 1; // b = b + 1
-
-    printf("b: %d\n", b);
+    printf("The size of Foo1 is %ld bytes\n", sizeof(foo1));
+    printf("The size of Foo2 is %ld bytes\n", sizeof(foo2));
 
     return 0;
+}
+
+void add_one(int array[], int length)
+{
+    printf("Array passed to function: %p\n", array); 
+    for(int i = 0; i < length; i++) array[i] += 1;
 }
