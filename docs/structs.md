@@ -16,6 +16,7 @@
     - [Struct pass by reference](#struct-pass-by-reference)
     - [Structs pointers members](#struct-pointer-members)
     - [Returning structs](#returning-structs)
+    - [Structs with program-defined members](#structs-with-program-defined-members)
     - [Struct size and data structure alignment](#struct-size-and-data-structure-alignment)
 
 - [External References](#external-references)
@@ -44,6 +45,8 @@ struct Point
 }; // Program-defined type definitions must end in a semicolon.
 ```
 
+No storage is allocated by declaring a structure, as shown above. This is a template of a struture.
+
 To create a new `Point` struct named `p1`.
 
 ```c
@@ -68,8 +71,9 @@ printf("(%d, %d)\n", p1.x, p1.y);
 We can create as many struct Points as required.
 
 ```c
-struct Point p2;
-struct Point p3;
+struct Point p1, p2; // on one line
+struct Point p3; // on separate lines
+struct Point p4;
 ```
 
 ### Using structs throughout a multi-file program
@@ -119,6 +123,8 @@ struct Employee
 
 int main()
 {
+
+    struct Employee bob = { 0 };  // initialise all including any inner struct to 0.
     struct Employee joe = { 2, 28 }; // joe.wage will be value-initialised to 0.000000
 
     printf("(%d, %d, %f)\n", joe.id, joe.age, joe.wage); // (2, 28, 0.000000)
@@ -587,6 +593,70 @@ In this case, a temporary Point3d is constructed, copied back to the caller, and
 
 Learn anonymous objects in more detail at [learncpp.com | Temporary class objects](https://www.learncpp.com/cpp-tutorial/temporary-class-objects/)
 
+### Structs with program-defined members
+In C, structs can have members that are other program-defined types. There are two ways to do this.
+
+First, we can define one program-defined type (in the global scope) and then use it as a member of another program-defined type:
+```c
+#include <stdio.h>
+
+struct Employee
+{
+    int id;
+    int age;
+    double wage;
+};
+
+struct Company
+{
+    int numberOfEmployees;
+    struct Employee CEO;
+};
+
+int main(int argc, char **argv)
+{
+    struct Company myCompany = { 7, { 1, 32, 55000.0 } }; // Nested initialization list to initialize Employee
+    printf("%f\n", myCompany.CEO.wage); // print the CEO's wage
+	return 0;
+}
+```
+In the above case, we’ve defined an Employee struct, and then used that as a member in a Company struct. When we initialise our Company, we can also initialise our Employee by using a nested initialization list. And if we want to know what the CEO’s salary was, we simply use the member selection operator twice: myCompany.CEO.wage;
+
+Second, types can also be nested inside other types, so if an Employee only existed as part of a Company, the Employee type could be nested inside the Company struct:
+
+```c
+#include <stdio.h>
+
+struct Company
+{
+    struct Employee // accessed via Company::Employee
+    {
+    int id;
+    int age;
+    double wage;
+    };
+
+    int numberOfEmployees;
+    struct Employee CEO; // Employee is a struct within the Company struct
+};
+
+int main()
+{
+    //struct Company myCompany = { 7, { 1, 32, 55000.0 } }; doesn't work in this case.
+
+    struct Company myCompany = {  // C99 Designated Initialisers
+        .numberOfEmployees = 7,
+        .CEO = { 1, 32, 55000.0 }
+        };
+    
+    printf("%d\n", myCompany.numberOfEmployees); // print number of employees
+    printf("%d\n", myCompany.CEO.id); // print the CEO's id
+    printf("%d\n", myCompany.CEO.age); // print the CEO's age
+    printf("%f\n", myCompany.CEO.wage); // print the CEO's wage
+	return 0;
+}
+```
+
 ### Struct size and data structure alignment
 
 Typically, the size of a struct is the sum of the size of all its members, but not always!
@@ -681,3 +751,4 @@ You can minimize padding by defining your members in decreasing order of size. T
  - [strcpy](https://www.tutorialspoint.com/c_standard_library/c_function_strcpy.htm)
  - [learncpp.com | Temporary class objects](https://www.learncpp.com/cpp-tutorial/temporary-class-objects/)
  - [learncpp.com | Struct miscellany](https://www.learncpp.com/cpp-tutorial/struct-miscellany/)
+ - [cppreference.com | struct initialization](https://en.cppreference.com/w/c/language/struct_initialization)
