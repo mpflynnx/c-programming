@@ -11,6 +11,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [scanf use with float and double](/docs/variable-types-and-using-printf-scanf.md#scanf-use-with-float-and-double)
     - [char variable](/docs/variable-types-and-using-printf-scanf.md#char-variable)
     - [printf and scanf with char variables](/docs/variable-types-and-using-printf-scanf.md#printf-and-scanf-with-char-variables)
+- [Enums](/docs/enums.md)
 - [printf](/docs/printf.md)
     - [printf special characters](/docs/printf.md#printf-special-characters)
     - [printf placeholder formatting options](/docs/printf.md#printf-placeholder-formatting-options)
