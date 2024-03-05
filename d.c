@@ -1,29 +1,28 @@
+// https://www.youtube.com/watch?v=1MtzsZmcVFE&list=PLlRFEj9H3Oj5NbaFb1b2n8lib01uNPWLa&index=16&t=2s
+// @ time 24.30
+
 #include <stdio.h>
+#include <string.h>
 
-typedef struct
-{
-    double x;
-    double y;
-    double z;
-}Point3d;
-
-Point3d getZeroPoint()
-{
-    // We can create a variable and return the variable (we'll improve this below)
-    // Point3d temp = { 0.0, 0.0, 0.0 };
-    // return temp;
-    // return (Point3d){0.0, 0.0, 0.0};
-    return (Point3d){};
-}
+union sample {
+    int i;
+    char ca[4];
+    float f;
+};
 
 int main()
 {
-    Point3d zero = getZeroPoint();
 
-    if (zero.x == 0.0 && zero.y == 0.0 && zero.z == 0.0)
-        printf("The point is zero\n");
-    else
-        printf("The point is not zero\n");
+    union sample u;
+    
+    u.i = 42;
+    printf("%08x %f %s\n", u.i, u.f, u.ca);
+    
+    strcpy(u.ca, "Abc");
+    printf("%08x %f %s\n", u.i, u.f, u.ca);
+    
+    u.f = 1.0/3.0;
+    printf("%08x %f %s\n", u.i, u.f, u.ca);
 
-    return 0;
+	return 0;
 }

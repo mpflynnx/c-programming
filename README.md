@@ -122,3 +122,4 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [C Library - <string.h>](https://www.tutorialspoint.com/c_standard_library/string_h.htm)
 - [C Library - <ctype.h>](https://www.tutorialspoint.com/c_standard_library/ctype_h.htm)
 - [C - File I/O](https://www.tutorialspoint.com/cprogramming/c_file_io.htm)
+- [geeksforgeeks.org | C Programming Language Tutorial](https://www.geeksforgeeks.org/c-programming-language/?ref=lbp)
