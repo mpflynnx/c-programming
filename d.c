@@ -1,6 +1,3 @@
-// https://www.youtube.com/watch?v=1MtzsZmcVFE&list=PLlRFEj9H3Oj5NbaFb1b2n8lib01uNPWLa&index=16&t=2s
-// @ time 24.30
-
 #include <stdio.h>
 #include <string.h>
 
@@ -25,4 +22,5 @@ int main()
     printf("%08x %f %s\n", u.i, u.f, u.ca);
 
 	return 0;
+
 }
