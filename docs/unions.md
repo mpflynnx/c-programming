@@ -5,9 +5,10 @@
 - [Overview](#overview)
 - [Defining a union](#defining-a-union)
 - [Anonymous unions](#anonymous-unions)
+- [Unions with typedef](#unions-with-typedef)
 - [Accessing union members](#accessing-union-members)
 - [Union initialisation](#union-initialisation)
-
+- [Printing union members](#printing-union-members)
 - [External References](#external-references)
 
 ### Overview
@@ -17,7 +18,7 @@
 - Size determined by the largest type. 
 
 ### Defining a union
-The declaration is identical to that of a struct, except the keyword union is used.
+The declaration is identical to that of a `struct`, except the keyword `union` is used.
 
 ```c
 union union_tag { // union_tag optional
@@ -26,7 +27,7 @@ union union_tag { // union_tag optional
 } optional_variable_definitions;
 ```
 
-The union definition is placed in the header and included in all source files that use the union type.
+The `union` definition is placed in the header and included in all source files that use the union type.
 
 **Example**
 ```c
@@ -37,9 +38,9 @@ union Data {
 } data1, data2; //global union variables optional
 ```
 
-A variable of type Data, can store an integer **or** a float, **or** a string of chars, not **all**. A struct could store **all** but not a union.
+A variable of type Data, can store an integer **or** a float, **or** a string of chars, not **all**. A `struct` could store **all** but not a `union`.
 
-The memory occupied by a union will be large enough to hold the largest member, in this case 20 bytes as char str[20] is the largest member.
+The memory occupied by a `union` will be large enough to hold the largest member, in this case 20 bytes as char str[20] is the largest member.
 
 - No memory is allocated until variables are created.
 - There is no limit to the number of members.
@@ -54,7 +55,7 @@ union Car {
     int i_value; // 4 bytes
     float f_value; // 4 bytes
     char c_value[40]; // 40 bytes largest member
-    }; //car1, car2, *car3;
+    }; //car1, car2, *car3; // can declare here
 
 int main()
 {
@@ -68,7 +69,7 @@ int main()
 ```bash
 Size of union: 40 bytes.
 ```
-The example code below, shows how the union memory storage is changed when assigning different type to the members.
+The example code below, shows how the `union` memory storage is changed when assigning different type to the members.
 
 ```c
 #include <stdio.h>
@@ -105,7 +106,7 @@ int main()
 ```
 
 ### Anonymous unions
-Introduced in C11. Anonymous unions exist only inside another union or struct. It has no union tag or variables assigned to it.
+Introduced in C11. Anonymous unions exist only inside another union or `struct`. It has no union tag or variables assigned to it.
 
 **Example**
 ```c
@@ -146,8 +147,30 @@ struct {
 } table [entries]; // array named table
 ```
 
+### Unions with typedef
+
+As with a `struct` a typedef can be declared for a union. This is **not** best practice as the word `union` is good information for the reader of your code.
+
+```c
+typedef union {
+    int x;
+    float y;
+    char z;
+} myunion;
+
+int main(){
+
+    myunion u; // no need for union keyword
+    u.x = 99;
+    u.y = 1.0;
+    u.z = 'c';
+
+    ...
+}
+```
+
 ### Accessing union members
-We access/assign data to members of a union, the same was we do with structs:
+We access/assign data to members of a `union`, the same was we do with a `struct`:
 - with the (.) dot operator to access members
 - with the (->) indirection operator to access pointer variables
 
@@ -212,6 +235,7 @@ int main()
 ```
 
 ### Union initialisation
+As with a `struct` there are a few ways to initialise a `union`.
 
 ```c
 #include <stdio.h>
@@ -224,11 +248,18 @@ union Number {
 int main()
 {
 
-    union Number value = {12}; // int is first member in union, so needs a int
+    union Number value1 = {12}; // int is first member in union, so needs a int
 
-    // alternatives
-    union Number value = {.x = 12}; // int is first member in union, so needs a int
-    union Number value = {.y = 3.142}; 
+    // preferred alternatives
+    union Number value2 = {.x = 12}; 
+    
+    union Number value3 = {.y = 3.142};
+
+    union Number value4;
+    value4.x = 12;
+
+    union Number value5;
+    value5.y = 3.142;
 
     return 0;
 }
@@ -282,6 +313,70 @@ int main()
 
     return 0;
 }
+```
+
+### Printing union members
+
+Here is a program that uses a `struct` and a anonymous `union`. The `struct` represents a Spaceship and the `union` represents a upgrade speed multiplier.
+
+```c
+#include <stdio.h>
+#include <stdbool.h>
+
+struct Spaceship {
+    char* name;
+    bool upgrade;
+    char upgradeClass;
+    float speed;
+    union {
+        float aClassUpgrade;
+        float sClassUpgrade;
+    };
+};
+
+void print_stats(struct Spaceship* c){
+    printf("Name: %s: ", c->name);
+    if (c->upgrade){
+        if (c->upgradeClass == 's')
+            printf("speed %f", c->speed * c->sClassUpgrade);
+        else 
+            printf("speed %f", c->speed * c->aClassUpgrade);
+    } else {
+        printf("speed %f", c->speed);
+    }
+    printf("\n");
+}
+
+
+int main()
+{
+
+    struct Spaceship cruiserX;
+    cruiserX.name = "Cruiser X";
+    cruiserX.speed = 23.0;
+    cruiserX.upgrade = true;
+    cruiserX.upgradeClass = 's';
+    cruiserX.sClassUpgrade = 2.5;
+    
+    print_stats(&cruiserX);
+
+    struct Spaceship traderY;
+    traderY.name = "Trader Y";
+    traderY.speed = 12.0;
+    traderY.upgrade = true;
+    traderY.upgradeClass = 'a';
+    traderY.aClassUpgrade = 1.1;
+
+    print_stats(&traderY);
+
+    return 0;
+}
+```
+
+**Output**
+```bash
+Name: Cruiser X: speed 57.500000
+Name: Trader Y: speed 13.200001
 ```
 
 
