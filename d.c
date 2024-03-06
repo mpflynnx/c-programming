@@ -1,25 +1,16 @@
 #include <stdio.h>
-#include <string.h>
 
-union sample {
-    int i;
-    char ca[4];
-    float f;
-};
+void add_one(int *array, int length);
 
 int main()
 {
 
-    union sample u;
-    
-    u.i = 42;
-    printf("%08x %f %s\n", u.i, u.f, u.ca);
-    
-    strcpy(u.ca, "Abc");
-    printf("%08x %f %s\n", u.i, u.f, u.ca);
-    
-    u.f = 1.0/3.0;
-    printf("%08x %f %s\n", u.i, u.f, u.ca);
+    int a[] = {1,2,3,4,5,6,7,8,9,10};
+
+    add_one(a + 5, 5);
+
+    for (int i = 0; i < 10; i++)
+        printf("a[%d]=%d\n", i, a[i]);
 
 	return 0;
 
