@@ -25,4 +25,5 @@ int main()
     printf("%08x %f %s\n", u.i, u.f, u.ca);
 
 	return 0;
+
 }
