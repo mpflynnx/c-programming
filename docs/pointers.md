@@ -3,12 +3,27 @@
 A pointer can be used to store a memory address of a variable.
 
 ```c
-int *p; // New pointer to store a int type variable
+int *ptr1; // New pointer to store a int type variables address
+int* ptr2; // same as above  but * after variable type.
+```
+**Best practice**
+When declaring a pointer type, place the asterisk after the variable type.
+```c
+int* ptr; // an uninitialised pointer (holds a garbage address)
+```
+
+**Best practice**
+Always initialise your pointers. Value initialise your pointers (to be null pointers) if you are not initialising them with the address of a valid object.
+
+```c
+int* ptr2 = NULL; // NULL keyword represents address zero
+int* ptr3 = 0; // value initialisation, null pointer represents no address or zero
 ```
 
 To store a memory address to an int type variable we used the `&` operator.
 
 ```c
+int* p = NULL;
 int a = 5;
 p = &a; // Assign memory address of a to p
 ```
