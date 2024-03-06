@@ -31,12 +31,23 @@ int *a; // pointer named a
 **malloc example usage**
 
 ```c
-a = malloc( sizeof(int) * 5);
+a = (int*) malloc( sizeof(int) * 5);
 ```
 
 The above will create a block of memory on the heap to store 5 integers.
 
-`sizeof(int)` determines the space needed to store an integer, we then multiple this by 5. Then pass this size to `malloc` function which in turn returns the memory address of the first integer. 
+The `(int*)` part is a type cast. It explicitly converts the result of `malloc` (which is a void* pointer) to an `int*` pointer. Some programmers omit this part for more concise code. The C standard allows this, and the compiler implicitly performs the cast. In C++ it is considered good practice to explicitly cast the result of `malloc` to the desired pointer type.
+
+`sizeof(int)` determines the space needed to store an integer, we then multiple this by `5`. Then pass this size to `malloc` function which in turn returns the memory address of the first integer. 
+
+On very rare occasions using `malloc` will fail, for example if there is not heap memory available. By default, if `malloc` fails, a null pointer is returned. We can check for this and exit the program with a error code of 1:
+
+```c
+int* a = (int*) malloc( sizeof(int) * 5); // one-liner
+
+if (a == NULL)
+    return 1;
+```
 
 We can treat this memory block as an array of integers and use array notation to write to the indexes of the array.
 
@@ -60,11 +71,27 @@ a = calloc( 5, sizeof(int));
 
 The above will create a block of memory on the heap to store 5 integers.
 
+As with `malloc` the C standard allows the omission of type casting the void pointer to `(int*)`, the compiler implicitly performs the cast. In C++ it is considered good practice to explicitly cast the result of `calloc` to the desired pointer type.
+
 `5` is the number of integers required to store. `sizeof(int)` determines the space needed to store an integer. Then pass this size to `calloc` function which in turn clears (writes 0's) to 5 memory locations then returns the memory address of the first integer. 
 
 We can treat this memory block as an array of integers and use array notation to write to the indexes of the array.
 
 `calloc` function performs more steps than `malloc` so there is a time penalty for writing 0's to the memory locations.
+
+On very rare occasions using `calloc` will fail, for example if there is not heap memory available. By default, if `calloc` fails, a null pointer is returned. We can check for this and exit the program with a error code of 1:
+
+```c
+int* a = calloc( 5, sizeof(int)); // one-liner
+
+if (a == NULL)
+    return 1;
+```
+
+```c
+	double* darr;
+    darr = calloc(sizeof(double), 100); // sizeof can be first also 
+```
 
 ### free()
 
@@ -82,6 +109,14 @@ Memory leaks can occur if the pointer value is lost and the memory cannot be rea
 
 With `malloc` and `calloc` we must first decide how much space to allocate, but what if we want to grow the space. For this we can use the `realloc` function.
 
+It is considered good practice to set the pointer to `NULL` after using `free` so we can check if it is empty after.
+```c
+free(a);
+a = NULL;
+```
+
+Don't ever call a NULL pointer, as things can go badly.
+
 ### realloc()
 
 The `realloc` function tries to increases the existing memory block, if it cannot grow the existing memory block it will create a new block in memory for the increased size, then copy the existing block into it. 
@@ -95,7 +130,9 @@ numbers = malloc( sizeof(int) * size);
 numbers = realloc(numbers, sizeof(int) * size);
 ```
 
-We firstly use `malloc` to create a block of memory to store integers at the given size. Function `realloc` can then be used (if required) to grow the memory block by a given size. 
+We firstly use `malloc` to create a block of memory to store integers at the given size. Function `realloc` can then be used (if required) to grow the memory block by a given size.
+
+Remember the original pointer address will be different if `realloc` had to move it to accommodate the larger size.
 
 ### Finding the average of a set of numbers.
 
