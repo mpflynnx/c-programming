@@ -1,17 +1,20 @@
 #include <stdio.h>
 
-void add_one(int *array, int length);
+long int factorial(int n);
 
-int main()
+int main(void)
 {
 
-    int a[] = {1,2,3,4,5,6,7,8,9,10};
+    int n = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Factorial of %d = %ld\n", n, factorial(n));
 
-    add_one(a + 5, 5);
+    return 0;
+}
 
-    for (int i = 0; i < 10; i++)
-        printf("a[%d]=%d\n", i, a[i]);
-
-	return 0;
-
+long int factorial(int n)
+{
+    if (n == 1) return 1;
+    return n * factorial(n-1);
 }
