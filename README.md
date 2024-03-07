@@ -124,3 +124,4 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [C Library - <ctype.h>](https://www.tutorialspoint.com/c_standard_library/ctype_h.htm)
 - [C - File I/O](https://www.tutorialspoint.com/cprogramming/c_file_io.htm)
 - [geeksforgeeks.org | C Programming Language Tutorial](https://www.geeksforgeeks.org/c-programming-language/?ref=lbp)
+- [geeksforgeeks.org | Error Handling in C](https://www.geeksforgeeks.org/error-handling-in-c/)
