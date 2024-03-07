@@ -22,6 +22,7 @@
 - [print command](#print-command)
     - [View variables](#view-variables)
     - [View structs and union](#view-structs-and-union)
+- [Viewing Memory Contents](#viewing-memory-contents)
 - [Setting variable values](#setting-variable-values)
     - [Setting main function variable values](#setting-main-function-variable-values)
     - [Setting a given functions variable values](#setting-a-given-functions-variable-values)
@@ -54,11 +55,19 @@ Starting the debugger using the command-line interface.
 ```bash
 $ gdb main.exe
 ```
+
 Type c to continue, then you are presented with the gdb prompt (gdb) as shown below.
 
 ```bash
 ...
 Reading symbols from d...
+(gdb)
+```
+
+Use `-q` to start in quiet mode.
+```bash
+$ gdb -q main.exe
+Reading symbols from main.exe...
 (gdb)
 ```
 
@@ -177,9 +186,25 @@ View variable value in alternative format
 ```
 
 #### View structs and union
+Use the print command followed by the name of the struct/union. Use `->` operator to view members.
 ```bash
-(gdb) print dataPtr->year
+(gdb) print myCompany
+$1 = {{id = 0, age = 0, wage = 0}, numberOfEmployees = 7, CEO = {id = 1, age = 32, wage = 55000}}
+(gdb) print myCompany->age
+$2 = 0
+(gdb) print myCompany->CEO
+$3 = {id = 1, age = 32, wage = 55000}
+(gdb) print myCompany->CEO->age
+$4 = 32
 ```
+### Viewing Memory Contents
+To examine the contents of memory directly (actual bit patterns), you can use the x command followed by the memory address. For example:
+```bash
+(gdb) x/bt 0x7ffffcc40
+0x7ffffcc40:    01000101
+```
+This command displays the bytes at the specified address in binary format.
+
 ### Setting variable values
 
 Set a variables value using the `set` command.
