@@ -11,6 +11,7 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [scanf use with float and double](/docs/variable-types-and-using-printf-scanf.md#scanf-use-with-float-and-double)
     - [char variable](/docs/variable-types-and-using-printf-scanf.md#char-variable)
     - [printf and scanf with char variables](/docs/variable-types-and-using-printf-scanf.md#printf-and-scanf-with-char-variables)
+- [Enums](/docs/enums.md)
 - [printf](/docs/printf.md)
     - [printf special characters](/docs/printf.md#printf-special-characters)
     - [printf placeholder formatting options](/docs/printf.md#printf-placeholder-formatting-options)
@@ -83,15 +84,9 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [calloc()](/docs/dynamically-allocated-memory.md#calloc)
     - [free()](/docs/dynamically-allocated-memory.md#free)
     - [realloc()](/docs/dynamically-allocated-memory.md#realloc)
-- [typedef and struct](/docs/typedef-and-struct.md)
-    - [struct](/docs/typedef-and-struct.md#struct)
-    - [Initialising struct members](/docs/typedef-and-struct.md#initialising-struct-members)
-    - [Using typedef with struct](/docs/typedef-and-struct.md#using-typedef-with-struct)
-    - [Passing a struct to a function](/docs/typedef-and-struct.md#passing-a-struct-to-a-function)
-    - [Problems with passing structs](/docs/typedef-and-struct.md#problems-with-passing-structs)
-    - [Using dynamic memory allocation with structs](/docs/typedef-and-struct.md#using-dynamic-memory-allocation-with-structs)
-    - [Struct pass by reference](/docs/typedef-and-struct.md#struct-pass-by-reference)
-    - [Structs pointers members](/docs/typedef-and-struct.md#struct-pointer-members)
+- [Typedefs](/docs/typedef-and-struct.md)
+- [Structs](/docs/structs.md)
+- [Unions](/docs/unions.md)
 - [2D arrays](/docs/2d-arrays.md)
     - [Nested loops](/docs/2d-arrays.md#nested-loops)
     - [Using constants](/docs/2d-arrays.md#using-constants)
@@ -116,10 +111,10 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
     - [Matching global scoped and function scoped variable names](/docs/global-scope-variables.md#matching-global-scoped-and-function-scoped-variable-names)
 - [User inputs with spaces](/docs/user-inputs-with-spaces.md)
 - [Debugging with gdb](/docs/debugging-with-gdb.md)
-- [References](#references)
+- [External References](#external-references)
 
 
-## References
+## External References
 
 - [This is a reference of the core C language constructs](https://en.cppreference.com/w/c/language)
 - [C Data types](https://en.wikipedia.org/wiki/C_data_types)
@@ -128,3 +123,4 @@ Course notes for the [C Programming for Beginners Course](https://www.youtube.co
 - [C Library - <string.h>](https://www.tutorialspoint.com/c_standard_library/string_h.htm)
 - [C Library - <ctype.h>](https://www.tutorialspoint.com/c_standard_library/ctype_h.htm)
 - [C - File I/O](https://www.tutorialspoint.com/cprogramming/c_file_io.htm)
+- [geeksforgeeks.org | C Programming Language Tutorial](https://www.geeksforgeeks.org/c-programming-language/?ref=lbp)
