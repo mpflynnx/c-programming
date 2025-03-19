@@ -175,6 +175,13 @@ View a main function variable value in **binary**, if stepped into a function.
 ```bash
 (gdb) print/t variable-name // p/t variable-name
 ```
+View a int variable named `x` in **binary**. Any leading zeros are removed.
+```bash
+(gdb) p /t x
+$4 = 10100001110101011110110010
+```
+
+
 View a main function variable value in **hexadecimal**, if stepped into a function.
 ```bash
 (gdb) print/x variable-name // p/x variable-name
@@ -208,24 +215,32 @@ To examine the contents of memory directly (actual bit patterns), you can use th
 (gdb) x/bt 0x7ffffcc40 // alt: x/tb 0x7ffffcc40
 0x7ffffcc40:    01000101
 ```
-This command displays the 4 bytes from the specified starting address in binary format.
-To display the 4bytes used to store a integer variable named `x` (32bit) use:-
+This command displays the 4 bytes from the specified low order bytes starting address in binary format.
+To display the 4bytes used to store a integer variable named `x` use:-
 ```bash
 (gdb) x/4bt &x // The 4 here represents display 4 bytes
 0x7fffffffdfac:	10110010	01010111	10000111	00000010
 ```
+**Note:** Low order byte displayed first, need to reverse byte order for actual **binary** equivalent of int x.
+
 To view in **binary** the four bytes move up the memory addresses.
 ```bash
 (gdb) x/tb 0x7fffffffdfac // Starting point
 0x7fffffffdfac:	10110010
-(gdb) x/tb 0x7fffffffdfad
+(gdb) x/tb 0x7fffffffdfad // next address
 0x7fffffffdfad:	01010111
-(gdb) x/tb 0x7fffffffdfae
+(gdb) x/tb 0x7fffffffdfae // next address
 0x7fffffffdfae:	10000111
 (gdb) x/tb 0x7fffffffdfaf
-0x7fffffffdfaf:	00000010
+0x7fffffffdfaf:	00000010 // last address
 ```
-To view in **heaxdecimal** the four bytes move up the memory addresses.
+Actual binary value is: 00000010100001110101011110110010
+
+
+To view in **hexadecimal** the four bytes move up the memory addresses.
+
+**Note:** Low order byte displayed first, need to reverse byte order for actual **hexadecimal** equivalent of int x.
+
 ```bash
 (gdb) x/tx 0x7fffffffdfac  // Starting point
 0x7fffffffdfac:	0xb2
@@ -236,6 +251,8 @@ To view in **heaxdecimal** the four bytes move up the memory addresses.
 (gdb) x/tx 0x7fffffffdfaf
 0x7fffffffdfaf:	0x02
 ```
+Actual hexadecimal value is: 0x028757b2
+
 
 ### Setting variable values
 
