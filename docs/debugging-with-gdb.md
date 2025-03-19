@@ -186,6 +186,13 @@ View a main function variable value in **hexadecimal**, if stepped into a functi
 ```bash
 (gdb) print/x variable-name // p/x variable-name
 ```
+View a int variable named `x` in **hexadecimal**.
+```bash
+(gdb) p /x x
+$3 = 0x28757b2
+```
+
+
 View a main function variable address.
 ```bash
 (gdb) print &variable-name // p &variable-name
@@ -364,5 +371,6 @@ Navigate the call stack frame using `up`, `down`, `frame` and `info args` comman
 - [udemy.com | Advanced C programming course | Debugging with gdb part1](https://www.udemy.com/course/advanced-c-programming-course/learn/lecture/17962238#overview)
 - [udemy.com | Advanced C programming course | Debugging with gdb part2](https://www.udemy.com/course/advanced-c-programming-course/learn/lecture/17962242#overview)
 - [GDB: The GNU Project Debugger Documentation](https://www.gnu.org/software/gdb/documentation/)
+- [Online Converter](https://www.rapidtables.com/convert/number/decimal-to-hex.html)
 
 [Back to top](#table-of-contents)
