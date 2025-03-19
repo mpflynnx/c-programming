@@ -20,7 +20,7 @@
     - [List in range lines of code](#list-in-range-lines-of-code)
     - [List lines of code in a given function](#list-lines-of-code-in-a-given-function)
 - [print command](#print-command)
-    - [View variables](#view-variables)
+    - [View variables values](#view-variables-values)
     - [View structs and union](#view-structs-and-union)
 - [Viewing Memory Contents](#viewing-memory-contents)
 - [Setting variable values](#setting-variable-values)
@@ -166,10 +166,18 @@ List 5 lines before and 5 lines after line 9.
 ### print command
 View variable values using the `print` command.
 
-#### View variables
+#### View variable values
 View a main function variable value, if stepped into a function.
 ```bash
 (gdb) print variable-name // p variable-name
+```
+View a main function variable value in **binary**, if stepped into a function.
+```bash
+(gdb) print/t variable-name // p/t variable-name
+```
+View a main function variable value in **hexadecimal**, if stepped into a function.
+```bash
+(gdb) print/x variable-name // p/x variable-name
 ```
 View a main function variable address.
 ```bash
