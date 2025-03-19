@@ -167,10 +167,16 @@ List 5 lines before and 5 lines after line 9.
 View variable values using the `print` command.
 
 #### View variable values
-View a main function variable value, if stepped into a function.
+View a main function variable value in **decimal**, if stepped into a function.
 ```bash
 (gdb) print variable-name // p variable-name
 ```
+View a int variable named `x` in **decimal**.
+```bash
+(gdb) p x
+$1 = 42424242
+```
+
 View a main function variable value in **binary**, if stepped into a function.
 ```bash
 (gdb) print/t variable-name // p/t variable-name
