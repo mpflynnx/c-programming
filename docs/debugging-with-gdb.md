@@ -188,10 +188,7 @@ View given name function variable value
 ```bash
 (gdb) print function-name::variable-name // p function-name::variable-name
 ```
-View variable value in alternative format
-```bash
-(gdb) print /x variable-name // p /x variable-name
-```
+
 
 #### View structs and union
 Use the print command followed by the name of the struct/union. Use `->` operator to view members.
@@ -208,10 +205,37 @@ $4 = 32
 ### Viewing Memory Contents
 To examine the contents of memory directly (actual bit patterns), you can use the x command followed by the memory address. For example:
 ```bash
-(gdb) x/bt 0x7ffffcc40
+(gdb) x/bt 0x7ffffcc40 // alt: x/tb 0x7ffffcc40
 0x7ffffcc40:    01000101
 ```
-This command displays the bytes at the specified address in binary format.
+This command displays the 4 bytes from the specified starting address in binary format.
+To display the 4bytes used to store a integer variable named `x` (32bit) use:-
+```bash
+(gdb) x/4bt &x // The 4 here represents display 4 bytes
+0x7fffffffdfac:	10110010	01010111	10000111	00000010
+```
+To view in **binary** the four bytes move up the memory addresses.
+```bash
+(gdb) x/tb 0x7fffffffdfac // Starting point
+0x7fffffffdfac:	10110010
+(gdb) x/tb 0x7fffffffdfad
+0x7fffffffdfad:	01010111
+(gdb) x/tb 0x7fffffffdfae
+0x7fffffffdfae:	10000111
+(gdb) x/tb 0x7fffffffdfaf
+0x7fffffffdfaf:	00000010
+```
+To view in **heaxdecimal** the four bytes move up the memory addresses.
+```bash
+(gdb) x/tx 0x7fffffffdfac  // Starting point
+0x7fffffffdfac:	0xb2
+(gdb) x/tx 0x7fffffffdfad
+0x7fffffffdfad:	0x57
+(gdb) x/tx 0x7fffffffdfae
+0x7fffffffdfae:	0x87
+(gdb) x/tx 0x7fffffffdfaf
+0x7fffffffdfaf:	0x02
+```
 
 ### Setting variable values
 
