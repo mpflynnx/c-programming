@@ -18,9 +18,9 @@ double y = -9.8;
 
 ### Modifiers
 
-We can assign modifiers to char, init, float and double types. These modifiers are signed, unsigned, short and long.
+We can assign modifiers to char, int, float and double types. These modifiers are signed, unsigned, short and long.
 
-- unsigned, makes the numbers only positive.  `unsigned int` contains at least the [0, 65,535] range. Uses 16 bits.
+- unsigned, makes the numbers only positive.  `unsigned int` contains at least the [0, 65,535] range. 4 Bytes.
 
 ```c
 unsigned int;
@@ -29,10 +29,11 @@ unsigned int;
 - signed, makes the number both negative and positive. Same effect as using just int with no modifiers.
 
 
-- short, reduces the maximum number that can be stored, to save bits. Capable of containing at least the [−32,767, +32,767] range. Uses 16 bits to store short int.
+- short, reduces the maximum number that can be stored, to save bits. Capable of containing at least the [−32,767, +32,767] range. 2 bytes.
 
 ```c
-short int;
+short int x;
+short x; // same as above
 ```
 
 - long, capable of containing at least the [−2,147,483,647, +2,147,483,647] range. Use 32 bits to store long int.
