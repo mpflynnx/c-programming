@@ -2,6 +2,8 @@
 
 A pointer can be used to store a memory address of a variable.
 
+Best practice for storing pointers on a 64-bit machine: Use uintptr_t or intptr_t from <stdint.h>
+
 ```c
 int *ptr1; // New pointer to store a int type variables address
 int* ptr2; // same as above  but * after variable type.
