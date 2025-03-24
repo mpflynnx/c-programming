@@ -130,15 +130,17 @@ y: -10.880000
 
 ### char variable
 
-`char` variable. For storing characters, must be assigned in single quotes. `char` are fundamentally integer values. Using the ASCII code which is a integer. For example the ASCII code for `d` is 100.
+
+`char` variable. For storing characters, must be assigned in single quotes. `char` are fundamentally integer values. To guarantee `char` is treated as signed data it is best practice to use the signed keyword.
+Using the ASCII code which is a integer. For example the ASCII code for `d` is 100.
 
 ```c
-char c = 'd'; // ASCII 100
+signed char c = 'd'; // ASCII 100
 ```
 
 The ASCII code can also be used.
 ```c
-char c = 100; // 'd'
+signed char c = 100; // 'd'
 ```
 
 ### printf and scanf with char variables
