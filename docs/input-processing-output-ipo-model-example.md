@@ -1,33 +1,33 @@
 ## Input Processing Output (IPO) Model example
 
-Declare an integer variable named `speed`
+Declare a 4-byte (32bit) integer variable named `speed`. Speed would normally always be a represented as positive number, never negative so we should use the unsigned type unit32_t
 
 ```c
-int speed;
+uint32_t int speed;
 ```
 
 Assign value to variable, initialise the variable.
 
 ```c
-int speed = 20; // km/h
+uint32_t speed = 20; // km/h
 ```
 
 Assign value to variable time, initialise the variable.
 
 ```c
-int time = 7; // hours
+uint32_t time = 7; // hours
 ```
 
 Can declare and initialise on one line multiple variables of same type.
 
 ```c
-int speed = 20, time = 7, distance = 5;
+uint32_t speed = 20, time = 7, distance = 5;
 ```
 
 Use expression to calculate distance
 
 ```c
-int distance = speed * time; // result = 140
+uint32_t distance = speed * time; // result = 140
 ```
 
 Output results of distance variable.
@@ -77,8 +77,8 @@ We first have to initialise the variables `speed` and `time`.
 It is best practice to assign a value to variables, even if the value will be updated by the user. This initialising a variable with a value, creates a space in memory and overwrites any previous data in that memory location. In our example we are defining integer variables so we should assign the value 0 to the variables.
 
 ```c
-    int speed = 0;
-    int time = 0;
+    uint32_t speed = 0;
+    uint32_t time = 0;
 ```
 
 Ask user to enter value for speed.
