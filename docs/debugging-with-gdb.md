@@ -202,7 +202,7 @@ $3 = 0x28757b2
 View a main function variable address.
 ```bash
 (gdb) print &variable-name // p &variable-name
-(gdb) print &variable-name+1 // view next memory location using pointer arithmetic
+(gdb) print &variable-name+1 // view next byte memory location using pointer arithmetic
 ```
 View given name function variable value
 ```bash
@@ -224,19 +224,30 @@ $4 = 32
 ```
 ### Viewing Memory Contents
 To examine the contents of memory directly (actual bit patterns), you can use the x command followed by the memory address. For example:
-```bash
-(gdb) x/bt 0x7ffffcc40 // alt: x/tb 0x7ffffcc40
-0x7ffffcc40:    01000101
+```c
+    int x = 42424242; // 0x028757b2
 ```
-This command displays the 4 words (4 bytes = 1 word) from the specified low order bytes starting address in binary format.
+```bash
+(gdb) x &x // defaults to display 1 word (4bytes) in hex
+0x7fffffffdf0c:	0x028757b2
+```
+```bash
+(gdb) x /1wx &x // display 1 word (4bytes) in hex
+0x7fffffffdf0c:	0x028757b2
+```
+Display 4 bytes, note litte endian representation
+```bash
+(gdb) x/4bx &x
+0x7fffffffdf0c:	0xb2	0x57	0x87	0x02
+(gdb) x/4bt &x
+0x7fffffffdf0c:	10110010	01010111	10000111	00000010
+```
+This command displays the 4 bytes (1 word) from the specified low order bytes starting address in binary format.
 To display the 4bytes used to store a integer variable named `x` use:-
-```bash
-(gdb) x/4bt &x // The 4 here represents display 4 bytes
-0x7fffffffdfac:	10110010	01010111	10000111	00000010
-```
+
 **Note:** Low order byte displayed first, need to reverse byte order for actual **binary** equivalent of int x.
 
-To view in **binary** the four bytes move up the memory addresses.
+To view in **binary** the four bytes move up the memory addresses 1 byte at a time.
 ```bash
 (gdb) x/tb 0x7fffffffdfac // Starting point
 0x7fffffffdfac:	10110010
