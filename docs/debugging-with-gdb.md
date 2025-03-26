@@ -163,6 +163,11 @@ List 5 lines before and 5 lines after line 9.
 (gdb) list function-name // alternatively l function-name
 ```
 
+#### Find the execution line and list code around it
+```bash
+(gdb) where
+```
+
 ### print command
 View variable values using the `print` command.
 
@@ -370,6 +375,8 @@ Alternatively `next` or `n` can be used. Note `next` will not step into a functi
 By default gdb with step into any non system defined functions.
 Use `next` command to **not** step into a function but skip over the function.
 
+use `finish` to finish a function stepped into.
+
 ### Viewing call stack
 Stack trace is a call stack which show the hierarchy of function calls.
 
@@ -384,6 +391,13 @@ View call stack using the `backtrace` or `bt` command.
 ```
 Navigate the call stack frame using `up`, `down`, `frame` and `info args` commands
 
+#### View assembly code
+```bash
+(gdb) disassemble
+```
+
+#### Activate TUI mode
+Press ctrl x + ctrl a
 
 ## External References
 - [udemy.com | Advanced C programming course | Debugging with gdb part1](https://www.udemy.com/course/advanced-c-programming-course/learn/lecture/17962238#overview)
