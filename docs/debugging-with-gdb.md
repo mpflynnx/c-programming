@@ -228,7 +228,7 @@ To examine the contents of memory directly (actual bit patterns), you can use th
 (gdb) x/bt 0x7ffffcc40 // alt: x/tb 0x7ffffcc40
 0x7ffffcc40:    01000101
 ```
-This command displays the 4 bytes from the specified low order bytes starting address in binary format.
+This command displays the 4 words (4 bytes = 1 word) from the specified low order bytes starting address in binary format.
 To display the 4bytes used to store a integer variable named `x` use:-
 ```bash
 (gdb) x/4bt &x // The 4 here represents display 4 bytes
