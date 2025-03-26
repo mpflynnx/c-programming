@@ -46,14 +46,14 @@
 To use the gdb debugger the `-g` flag should be set at program compile time. Debugging information is then built into the executable file.
 
 ```bash
-$ gcc -g -o main.exe main.c
+$ gcc -g -o -og main.c -o main
 ```
 
 ### Starting and quitting the debugger
 
 Starting the debugger using the command-line interface.
 ```bash
-$ gdb main.exe
+$ gdb ./main
 ```
 
 Type c to continue, then you are presented with the gdb prompt (gdb) as shown below.
@@ -66,7 +66,7 @@ Reading symbols from d...
 
 Use `-q` to start in quiet mode.
 ```bash
-$ gdb -q main.exe
+$ gdb -q ./main
 Reading symbols from main.exe...
 (gdb)
 ```
@@ -358,6 +358,7 @@ After a breakpoint has been hit, single step using the `step` command.
 ```bash
 (gdb) step // alternatively s
 ```
+Alternatively `next` or `n` can be used. Note `next` will not step into a function
 
 #### Step to line number
 
@@ -367,7 +368,7 @@ After a breakpoint has been hit, single step using the `step` command.
 
 #### Step into a function
 By default gdb with step into any non system defined functions.
-Use `next` command to **not** step into a function but skip o ver the function.
+Use `next` command to **not** step into a function but skip over the function.
 
 ### Viewing call stack
 Stack trace is a call stack which show the hierarchy of function calls.
