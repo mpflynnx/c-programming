@@ -1,4 +1,4 @@
-# C Programming for Beginners Course
+# C Programming
 
 Course notes for the [C Programming for Beginners Course](https://www.youtube.com/watch?v=ssJY5MDLjlo&t=3220s) provided by [Portfolio Courses](https://portfoliocourses.com/).
 
