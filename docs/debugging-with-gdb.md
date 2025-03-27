@@ -23,6 +23,7 @@
     - [View variables values](#view-variables-values)
     - [View structs and union](#view-structs-and-union)
 - [Viewing Memory Contents](#viewing-memory-contents)
+- [Watch and display](#watch-and-display)
 - [Setting variable values](#setting-variable-values)
     - [Setting main function variable values](#setting-main-function-variable-values)
     - [Setting a given functions variable values](#setting-a-given-functions-variable-values)
@@ -37,9 +38,7 @@
     - [Single step line by line](#single-step-line-by-line)
     - [Step to line number](#step-to-line-number)
     - [Step into a function](#step-into-a-function)
-- [Viewing call stack](#viewing-call-stack)
-    
-
+- [Viewing call stack](#viewing-call-stack)   
 - [External References](#external-references)
 
 ### Compiler options
@@ -192,7 +191,6 @@ View a int variable named `x` in **binary**. Any leading zeros are removed.
 $4 = 10100001110101011110110010
 ```
 
-
 View a main function variable value in **hexadecimal**, if stepped into a function.
 ```bash
 (gdb) print/x variable-name // p/x variable-name
@@ -202,8 +200,6 @@ View a int variable named `x` in **hexadecimal**.
 (gdb) p /x x
 $3 = 0x28757b2
 ```
-
-
 View a main function variable address.
 ```bash
 (gdb) print &variable-name // p &variable-name
@@ -213,8 +209,6 @@ View given name function variable value
 ```bash
 (gdb) print function-name::variable-name // p function-name::variable-name
 ```
-
-
 #### View structs and union
 Use the print command followed by the name of the struct/union. Use `->` operator to view members.
 ```bash
@@ -282,7 +276,32 @@ To view in **hexadecimal** the four bytes move up the memory addresses.
 ```
 Actual hexadecimal value is: 0x028757b2
 
+### Watch and display
 
+To set a watchpoint every time the value of a particular variable changes set a watchpoint on that variable using:
+```bash
+(gdb) watch <variable_name>
+```
+You can view both watchpoints and breakpoints using:
+```bash
+(gdb) info breakpoints
+```
+To remove a watchpoint, use:
+```bash
+(gdb) disable <watchpoint_number>
+```
+Display an expression every time the program stops:
+```bash
+(gdb) display expression
+```
+Print a list of the automatically displayed expressions including the display number:
+```bash
+(gdb) info display
+```
+Remove an automatic display:
+```bash
+(gdb) delete display <display_number
+```
 ### Setting variable values
 
 Set a variables value using the `set` command.
@@ -404,5 +423,6 @@ Press ctrl x + ctrl a
 - [udemy.com | Advanced C programming course | Debugging with gdb part2](https://www.udemy.com/course/advanced-c-programming-course/learn/lecture/17962242#overview)
 - [GDB: The GNU Project Debugger Documentation](https://www.gnu.org/software/gdb/documentation/)
 - [Online Converter](https://www.rapidtables.com/convert/number/decimal-to-hex.html)
+- [GDB - watch and display](https://cgi.cse.unsw.edu.au/~learn/debugging/modules/gdb_watch_display/)
 
 [Back to top](#table-of-contents)
