@@ -310,13 +310,26 @@ Set a variables value using the `set` command.
 ```bash
 (gdb) set var i = i * 2
 ```
+Set to a binary value using `0b` prefix
+```bash
+(gdb) set y = 0b10101010
+(gdb) p /t y
+$4 = 10101010
+(gdb) p /x y
+$5 = 0xaa
+```
+Set to a hexadecimal value using `0x` prefix
+```bash
+(gdb) set y = 0x55
+(gdb) p /t y
+$7 = 1010101
+```
 Set a variable to a previously printed variable.
 ```bash
 (gdb) print i
 $1 = 5
 (gdb) set var j = $1 // j = 5
 ```
-
 #### Setting a given functions variable values
 The function must be active at time.
 ```bash
