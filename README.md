@@ -1,6 +1,6 @@
 # C Programming
 
-Course notes for the [C Programming for Beginners Course](https://www.youtube.com/watch?v=ssJY5MDLjlo&t=3220s) provided by [Portfolio Courses](https://portfoliocourses.com/).
+C programming and debugging notes from various resources including [C Programming for Beginners](https://youtu.be/ssJY5MDLjlo?si=2Mckqmh7YZMZjJ12) provided by [Portfolio Courses](https://portfoliocourses.com/) and [Advanced C Programming](https://www.udemy.com/course/advanced-c-programming-course/?couponCode=ST8MT220425G3) by Jason Fedin.
 
 # Table of Contents
 - [Hello World first C Program](/docs/hello-world-first-c-program.md)
