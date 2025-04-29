@@ -211,7 +211,8 @@ View given name function variable value
 ```
 
 #### Arrays
-Print arrays and array size
+Print arrays and array size. 
+Note: For char arrays, the null terminator is included in the size returned.
 ```bash
 (gdb) print arrayName; /* char array */
 $4 = "This is a short string."
