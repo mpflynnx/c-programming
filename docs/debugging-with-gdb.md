@@ -209,6 +209,18 @@ View given name function variable value
 ```bash
 (gdb) print function-name::variable-name // p function-name::variable-name
 ```
+
+#### Arrays
+Print arrays and array size
+```bash
+(gdb) print arrayName; /* char array */
+$4 = "This is a short string."
+(gdb) ptype arrayName; /* find array size */
+type = char [24]
+(gdb) p sizeof(arrayName)/sizeof(*arrayName)
+$3 = 24
+```
+
 #### View structs and union
 Use the print command followed by the name of the struct/union. Use `->` operator to view members.
 ```bash
