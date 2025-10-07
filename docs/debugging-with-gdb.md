@@ -450,5 +450,6 @@ Press ctrl x + ctrl a
 - [GDB: The GNU Project Debugger Documentation](https://www.gnu.org/software/gdb/documentation/)
 - [Online Converter](https://www.rapidtables.com/convert/number/decimal-to-hex.html)
 - [GDB - watch and display](https://cgi.cse.unsw.edu.au/~learn/debugging/modules/gdb_watch_display/)
+- [gdb (and ddd) Guide](https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_gdb.php)
 
 [Back to top](#table-of-contents)
