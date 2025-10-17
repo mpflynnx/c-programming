@@ -20,7 +20,7 @@
     - [List in range lines of code](#list-in-range-lines-of-code)
     - [List lines of code in a given function](#list-lines-of-code-in-a-given-function)
 - [print command](#print-command)
-    - [View variables values](#view-variables-values)
+    - [View variables values](#view-variable-values)
     - [View structs and union](#view-structs-and-union)
 - [Viewing Memory Contents](#viewing-memory-contents)
 - [Watch and display](#watch-and-display)
@@ -32,6 +32,7 @@
     - [Break on line number](#break-on-line-number)
     - [Break on function name](#break-on-function-name)
     - [Break on source file function name](#break-on-source-file-function-name)
+    - [Break on all Class member functions](#break-on-all-class-member-functions)
     - [Continue the program after breakpoint](#continue-the-program-after-breakpoint)
     - [View all set breakpoints](#view-all-set-breakpoints)
     - [Delete a breakpoint](#delete-a-breakpoint)
@@ -68,6 +69,11 @@ Use `-q` to start in quiet mode.
 $ gdb -q ./main
 Reading symbols from main.exe...
 (gdb)
+```
+
+Re-compile program without leaving `GDB` using `make` command. `Makefile` must exists in same location as the executable being tested.
+```bash
+(gdb) make
 ```
 
 Quitting a running program.
@@ -382,6 +388,23 @@ Breakpoint 1 at 0x10040108d: file main.c, line 8.
 Given source file `foo.c` contains function named `foo`.
 ```bash
 (gdb) break foo.c:foo // alternatively b foo.c:foo
+```
+
+#### Break on all Class member functions
+Set a breakpoint on all Class member functions using `rbreak` with a regular expression.
+```bash
+(gdb) rbreak ^Soundex::.*
+```
+```
+`^` Matches the start of the function name string
+
+`Soundex::` Matches the literal class name followed by C++ scope resolution operator
+
+`.*` Matches any character (.) zero or more times (*). This covers all member functions including constructors, deconstructors and overloaded functions
+```
+**NOTE** If your class is defined within a namespace, you must include the namespace in the regular expression:
+```
+(gdb) rbreak ^MyNamespace::MyClass::.*
 ```
 
 #### Continue the program after breakpoint
