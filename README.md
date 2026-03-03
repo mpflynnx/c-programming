@@ -125,3 +125,6 @@ C programming and debugging notes from various resources including [C Programmin
 - [C - File I/O](https://www.tutorialspoint.com/cprogramming/c_file_io.htm)
 - [geeksforgeeks.org | C Programming Language Tutorial](https://www.geeksforgeeks.org/c-programming-language/?ref=lbp)
 - [geeksforgeeks.org | Error Handling in C](https://www.geeksforgeeks.org/error-handling-in-c/)
+
+## Books
+- Programming in C by Stephen G. Kochan
