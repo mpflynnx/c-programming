@@ -114,3 +114,14 @@ printf("|||%10.2f|||\n", 5.456700);
 ```bash
 |||      5.46|||
 ```
+
+### printf hexadecimal
+
+```c
+printf("ACCEL_CONFIG bitfields = 0x%02X\n", accelConfigReg8);
+```
+
+**Output**
+```bash
+ACCEL_CONFIG bitfields = 0xB0
+```
