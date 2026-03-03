@@ -7,12 +7,16 @@ Best practice for storing pointers on a 64-bit machine: Use uintptr_t or intptr_
 ```c
 int *ptr1; // New pointer to store a int type variables address
 int* ptr2; // same as above  but * after variable type.
+int * ptr3; // still the same
 ```
+The `*` can be be written next to the type or next to the name.
+
 **Best practice**
 When declaring a pointer type, place the asterisk after the variable type.
 ```c
 int* ptr; // an uninitialised pointer (holds a garbage address)
 ```
+
 
 **Best practice**
 Always initialise your pointers. Value initialise your pointers (to be null pointers) if you are not initialising them with the address of a valid object.
